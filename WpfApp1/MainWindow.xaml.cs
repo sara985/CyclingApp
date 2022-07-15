@@ -24,5 +24,32 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void WinMain_Loaded(object sender, RoutedEventArgs e)
+        {
+            BtnLogin.Content = "Let's Login";
+        }
+
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            BtnLogin.Content = "Log out ";
+            Button BtnContactAdmin = new Button();
+            BtnContactAdmin.Content = "Contact Admin";
+            BtnContactAdmin.Width = 200;
+            BtnContactAdmin.Height = 60;
+           
+            BtnContactAdmin.Click += new RoutedEventHandler(BtnContactAdmin_clicked);
+            FirstGrid.Children.Add(BtnContactAdmin);
+        }
+
+        private void BtnContactAdmin_clicked(object sender, RoutedEventArgs e)
+        {
+            WinMain.Title = "ClubMember HomePage";
+        }
+
+        private void BtnLogin_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

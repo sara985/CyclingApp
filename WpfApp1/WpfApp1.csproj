@@ -8,7 +8,15 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="icons8-bike-64.png" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Folder Include="Models" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="icons8-bike-64.png" />
     </ItemGroup>
 
 </Project>
