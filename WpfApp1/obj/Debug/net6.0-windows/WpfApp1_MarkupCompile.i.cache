@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Sarah\Documents\GitHub\CyclingApp\WpfApp1\App.xaml
-11407045341
+21395559865
 
-81624455378
+101372478368
 214265300637
-MainWindow.xaml;
+MainWindow.xaml;Views\PersonList.xaml;
 
-False
+True
 
