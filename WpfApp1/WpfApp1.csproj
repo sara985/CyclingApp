@@ -8,6 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="icons8-bike-64.png" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Folder Include="Models" />
       <Folder Include="DB\" />
     </ItemGroup>
@@ -22,6 +26,10 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="icons8-bike-64.png" />
     </ItemGroup>
 
     <ItemGroup>
