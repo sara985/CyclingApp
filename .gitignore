@@ -251,4 +251,5 @@ paket-files/
 *.sln.iml
 
 #other
-.g.i.cs
+*.g.i.cs
+*.assets.cache
