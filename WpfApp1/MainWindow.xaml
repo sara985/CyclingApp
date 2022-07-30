@@ -8,6 +8,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" FontSize="14">
     <Grid Margin="20 10" MaxWidth="600" >
-        <views:ReservationListingView />
+        <views:ReservationListingView DataContext="{Binding CurrentViewModel}"/>
+        <!-- vidéo 3, 12 min 30 pour comprendre-->
+        <!-- TODO reprendre vidéo 3 à 13 min 30-->
     </Grid>
 </Window>
