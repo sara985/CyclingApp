@@ -24,10 +24,10 @@ namespace WpfApp1.Models
             _reservationbook = reservationBook;
         }
         //13 min 14
-        public IEnumerable<Reservation> GetReservationsForUser(string username)
-        {
-            return _reservationbook.GetReservationsForUser(username);
-        }
+        //public IEnumerable<Reservation> GetReservationsForUser(string username)
+        //{
+        //    return _reservationbook.GetReservationsForUser(username);
+        //}
 
         public void MakeReservation(Reservation res)
         {

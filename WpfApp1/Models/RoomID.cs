@@ -40,7 +40,7 @@ namespace WpfApp1.Models
             {
                 return true;
             }
-            return !id1.Equals(null) && id1.Equals(id2);
+            return id1 is not null && id1.Equals(id2);
         }
 
         public static bool operator !=(RoomID id1, RoomID id2)

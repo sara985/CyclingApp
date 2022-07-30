@@ -40,7 +40,7 @@ namespace WpfApp1
             {
                 Console.WriteLine(ex.Message);
             }
-            IEnumerable<Reservation> reservations = hotel.GetReservationsForUser("sarah");
+            //IEnumerable<Reservation> reservations = hotel.GetReservationsForUser("sarah");
 
             base.OnStartup(e);
         }
