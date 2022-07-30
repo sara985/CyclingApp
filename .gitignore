@@ -250,3 +250,5 @@ paket-files/
 .idea/
 *.sln.iml
 
+#other
+.g.i.cs
