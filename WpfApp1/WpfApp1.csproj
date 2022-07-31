@@ -8,7 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="adventure.png" />
+      <None Remove="bicycle.png" />
       <None Remove="icons8-bike-64.png" />
+      <None Remove="manager.png" />
+      <None Remove="team.png" />
     </ItemGroup>
 
     <ItemGroup>
@@ -29,7 +33,11 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Resource Include="adventure.png" />
+      <Resource Include="bicycle.png" />
       <Resource Include="icons8-bike-64.png" />
+      <Resource Include="manager.png" />
+      <Resource Include="team.png" />
     </ItemGroup>
 
     <ItemGroup>

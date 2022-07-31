@@ -26,7 +26,7 @@ namespace WpfApp1.DB
         public virtual DbSet<Outing> Outings { get; set; } = null!;
         public virtual DbSet<Outingregistration> Outingregistrations { get; set; } = null!;
         public virtual DbSet<Outingtransport> Outingtransports { get; set; } = null!;
-        public virtual DbSet<Person> People { get; set; } = null!;
+        public virtual DbSet<Person> Persons { get; set; } = null!;
         public virtual DbSet<Position> Positions { get; set; } = null!;
         public virtual DbSet<Requestbike> Requestbikes { get; set; } = null!;
         public virtual DbSet<Requestpassanger> Requestpassangers { get; set; } = null!;

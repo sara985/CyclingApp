@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.DB;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1
 {
@@ -32,6 +33,12 @@ namespace WpfApp1
             {
 
             }
+        }
+
+        private void btnMember_Click(object sender, RoutedEventArgs e)
+        {
+            lblWindowName.Content = "Member List";
+            DataContext = new ClubmemberViewModels();
         }
     }
 }
