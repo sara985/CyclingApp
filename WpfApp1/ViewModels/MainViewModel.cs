@@ -12,7 +12,7 @@ namespace WpfApp1.ViewModels
 
         public MainViewModel()
         {
-            CurrentViewModel = new MakeReservationViewModel();
+            CurrentViewModel = new ReservationListingViewModel();
         }
     }
 }

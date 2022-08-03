@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using WpfApp1.Exceptions;
 using WpfApp1.Models;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1
 {
@@ -17,30 +18,11 @@ namespace WpfApp1
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            Hotel hotel = new Hotel("My Suites"); 
-            try
+            MainWindow = new MainWindow()
             {
-                Reservation res = new Reservation(
-                    new RoomID(1, 3),
-                    "sarah",
-                    new DateTime(2000, 1, 1),
-                    new DateTime(2000, 1, 2));
-
-                hotel.MakeReservation(res);
-
-
-                hotel.MakeReservation(new Reservation(
-                new RoomID(1, 3),
-                "sarah",
-                new DateTime(2000, 1, 1),
-                new DateTime(2000, 1, 4)
-                ));
-            }
-            catch (ReservationConflictException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            //IEnumerable<Reservation> reservations = hotel.GetReservationsForUser("sarah");
+                DataContext = new MainViewModel()
+            };
+            MainWindow.Show();
 
             base.OnStartup(e);
         }
