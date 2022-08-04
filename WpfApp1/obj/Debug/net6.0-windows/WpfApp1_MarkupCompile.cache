@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\App.xaml
-21617302673
+3-1578838338
 
-221842764793
+6-1733703053
 214-1120561264
-MainWindow.xaml;Views\memberList.xaml;
+LoginPage.xaml;MainWindow.xaml;Views\memberList.xaml;
 
-False
+True
 

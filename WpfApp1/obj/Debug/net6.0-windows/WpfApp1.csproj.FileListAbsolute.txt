@@ -75,3 +75,6 @@ C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\WpfA
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\memberList.g.cs
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\memberList.baml
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\Login.g.cs
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\Login.baml
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\LoginPage.g.cs

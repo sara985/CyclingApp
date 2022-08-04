@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp1.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Cycling Club Login" Height="200" Width="360" WindowStartupLocation="CenterScreen" FontSize="24" FontWeight="Bold" Loaded="Window_Loaded" Background="#FF39DD3B" Icon="/icons8-bike-64.png" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="E-mail" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtEmail" Grid.Column="1" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,0,10,0"/>
+
+        <Label Content="Password" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBox x:Name="txtPassword" Grid.Column="1" Grid.Row="1" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,0,10,0"/>
+        <Button Grid.Row="2"/>
+        <Button/>
+    </Grid>
+</Window>
