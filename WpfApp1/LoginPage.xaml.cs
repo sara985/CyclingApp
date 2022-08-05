@@ -30,6 +30,12 @@ namespace WpfApp1
             {
                 MessageBox.Show("Please fill in your email and password");
             }
+            else
+            {
+                this.Visibility = Visibility.Collapsed;
+                NonAdminPage membermain = new NonAdminPage();
+                membermain.ShowDialog();
+            }
             
         }
     }
