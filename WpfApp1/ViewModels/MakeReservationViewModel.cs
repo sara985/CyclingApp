@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WpfApp1.Commands;
+using WpfApp1.Models;
+using WpfApp1.Stores;
 
 namespace WpfApp1.ViewModels
 {
@@ -44,7 +47,7 @@ namespace WpfApp1.ViewModels
             }
         }
 
-        private DateTime _startDate;
+        private DateTime _startDate = DateTime.Today;
         public DateTime StartDate
         {
             get { return _startDate; }
@@ -55,7 +58,7 @@ namespace WpfApp1.ViewModels
             }
         }
 
-        private DateTime _endDate;
+        private DateTime _endDate = DateTime.Today.AddDays(1);
         public DateTime EndDate
         {
             get { return _endDate; }
@@ -69,9 +72,10 @@ namespace WpfApp1.ViewModels
         public ICommand SubmitCommand { get;}
         public ICommand CancelCommand { get;}
 
-        public MakeReservationViewModel()
+        protected MakeReservationViewModel(Hotel hotel, NavigationStore navigationStore, Func<ReservationListingViewModel> createReservationListingViewModel)
         {
-
+            SubmitCommand = new MakeReservationCommand(this, hotel);
+            CancelCommand = new NavigateCommand(navigationStore, createReservationListingViewModel);
         }
     }
 }

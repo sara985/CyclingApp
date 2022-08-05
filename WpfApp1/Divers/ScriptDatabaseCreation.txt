@@ -15,8 +15,6 @@ CREATE TABLE dbo.position (
 	PRIMARY KEY (idpos)
 );
 
-hhhhh
-
 CREATE TABLE dbo.member (
     memberid integer NOT NULL,
     mail varchar(20) NOT NULL,
