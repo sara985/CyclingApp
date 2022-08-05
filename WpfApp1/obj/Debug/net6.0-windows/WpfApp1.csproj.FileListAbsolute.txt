@@ -74,3 +74,5 @@ C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\bin\Debug\net6.0-windows\runt
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.csproj.CopyComplete
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\LoginPage.g.cs
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\LoginPage.baml
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\NonAdminPage.g.cs
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\NonAdminPage.baml
