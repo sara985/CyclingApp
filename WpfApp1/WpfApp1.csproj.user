@@ -5,15 +5,9 @@
     <Compile Update="LoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\memberList.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="LoginPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\memberList.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

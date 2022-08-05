@@ -8,16 +8,21 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <None Remove="adventure.png" />
-      <None Remove="bicycle.png" />
-      <None Remove="icons8-bike-64.png" />
-      <None Remove="manager.png" />
-      <None Remove="team.png" />
+      <Compile Remove="Models\**" />
+      <EmbeddedResource Remove="Models\**" />
+      <None Remove="Models\**" />
+      <Page Remove="Models\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Models" />
+      <None Remove="adventure.png" />
+      <None Remove="bicycle.png" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Folder Include="DB\" />
+      <Folder Include="ViewModels\" />
+      <Folder Include="Views\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -35,9 +40,6 @@
     <ItemGroup>
       <Resource Include="adventure.png" />
       <Resource Include="bicycle.png" />
-      <Resource Include="icons8-bike-64.png" />
-      <Resource Include="manager.png" />
-      <Resource Include="team.png" />
     </ItemGroup>
 
     <ItemGroup>

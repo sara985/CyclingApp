@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Cycling Club Login" Height="200" Width="360" WindowStartupLocation="CenterScreen" FontSize="24" FontWeight="Bold" Loaded="Window_Loaded" Background="#FF39DD3B" Icon="/icons8-bike-64.png" ResizeMode="NoResize">
+        Title="Cycling Club Login Page" Height="200" Width="350" WindowStartupLocation="CenterScreen" Background="#FF39DD3B" Icon="/bicycle.png" FontWeight="Bold" FontSize="18">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -17,12 +17,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="E-mail" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <TextBox x:Name="txtEmail" Grid.Column="1" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,0,10,0"/>
 
-        <Label Content="Password" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1"/>
-        <TextBox x:Name="txtPassword" Grid.Column="1" Grid.Row="1" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,0,10,0"/>
-        <Button Grid.Row="2"/>
-        <Button/>
+        <Label Content="E-mail" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtEmail" Grid.Column="1" Width="165" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26"/>
+
+        <Label Content="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBox x:Name="txtPassword" Grid.Column="1" Grid.Row="1" Width="165" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25"/>
+        <Button x:Name="btnLogin" Content="Login" Grid.Row="2" Margin="50,0,0,0" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btnSignup" Content="Signup" Grid.Row="2" Grid.Column="1" Margin="0,0,50,0" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>

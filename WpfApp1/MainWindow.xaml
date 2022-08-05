@@ -4,70 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
-        xmlns:views="clr-namespace:WpfApp1.Views"
-        xmlns:viewModels="clr-namespace:WpfApp1.ViewModels"
         mc:Ignorable="d"
-        Title="WPF Cycling Club"  Name="CyClbManagerMain" Height="540" Width="1200" WindowStartupLocation="CenterScreen" FontSize="24" FontWeight="Bold" Loaded="Window_Loaded" Background="#FF39DD3B" Icon="/icons8-bike-64.png" ResizeMode="NoResize" >
+        Title="WPF Cycling Club"  Name="CyClbManagerMain" Height="540" Width="1200" FontSize="24" FontWeight="Bold"  Background="#FF39DD3B" Icon="/bicycle.png"  >
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="4*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" Margin="215,66,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
-        <Image Source="/bicycle.png" IsEnabled="False"/>
-        <ContentControl Content="{Binding}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Height="Auto" Width="Auto"/>
-        <Label x:Name="lblWindowName" Grid.Column="1" Content="Windows Name" HorizontalAlignment="Center" Margin="324,44,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="36" FontWeight="Bold"/>
-        <StackPanel Grid.Row="1" Margin="0,2,0,0">
-            <Button Grid.Row="1" Name="btnManager" Height="120" Width="250" HorizontalAlignment="Left">
-                <Grid Width="230">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Image x:Name="managerImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/manager.png"/>
-                    <TextBlock Text="Manager" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Margin="0,2,0,0">
-            <Button Grid.Row="2" Name="btnMember" Height="120" Width="250" HorizontalAlignment="Left" Click="btnMember_Click">
-                <Grid Width="230">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Image x:Name="memberImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/team.png"/>
-                    <TextBlock Text="Members" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-        </StackPanel>
-
-        <StackPanel Grid.Row="3" Margin="0,2,0,0">
-            <Button Grid.Row="3" Name="btnOuting" Height="120" Width="250" HorizontalAlignment="Left">
-                <Grid Width="230">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Image x:Name="autingImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/adventure.png"/>
-                    <TextBlock Text="Auting" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-        </StackPanel>
+        
     </Grid>
-    <Window.Resources>
-        <DataTemplate x:Name="MemberTemplate" DataType="{x:Type viewModels:ClubmemberViewModels}">
-            <views:memberList>
-                
-            </views:memberList>
-            
-        </DataTemplate>
-    </Window.Resources>
+   
 </Window>
