@@ -23,5 +23,14 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            if(txtEmail.Text.Trim()=="" || txtPassword.Text.Trim() =="")
+            {
+                MessageBox.Show("Please fill in your email and password");
+            }
+            
+        }
     }
 }
