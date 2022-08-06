@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1
 {
@@ -22,6 +23,12 @@ namespace WpfApp1
         public NonAdminPage()
         {
             InitializeComponent();
+        }
+
+        private void btnMemberOuting_Click(object sender, RoutedEventArgs e)
+        {
+            lblMainMember.Content = "Check our the list of outings";
+            DataContext = new MemberOutingViewModel();
         }
     }
 }

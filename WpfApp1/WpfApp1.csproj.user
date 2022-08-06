@@ -8,12 +8,18 @@
     <Compile Update="NonAdminPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\OutingList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="LoginPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="NonAdminPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OutingList.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

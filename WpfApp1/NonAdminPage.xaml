@@ -4,12 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:views="clr-namespace:WpfApp1.Views"
+        xmlns:viewmodels="clr-namespace:WpfApp1.ViewModels"
         mc:Ignorable="d"
         Title="Cycling Club"  Name="CyClbMemberMain" Height="540" Width="1200" FontSize="24" FontWeight="Bold"  Background="#FF39DD3B" Icon="/bicycle.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="139*"/>
-            <ColumnDefinition Width="461*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -19,47 +21,54 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Image Source="/bicycle.png" />
-        <ContentControl Grid.Column="1" Grid.RowSpan="4" Content="" Height="auto" Width="auto" Margin="0,131,0,0"/>
-        <Label x:Name="lblMainMember" Grid.Column="1" Content="Cycling Club Mons" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" FontSize="36" Height="58" Width="324"/>
+        <ContentControl Content="{Binding}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Height="auto" Width="auto"/>
+        <Label x:Name="lblMainMember" Content="Cycling Club Mons" Grid.Column="1" HorizontalAlignment="Center" Margin="212,10,0,0" VerticalAlignment="Top" FontSize="36" Height="58" Width="324"/>
 
         <StackPanel Grid.Row="1" Margin="0,2,0,0">
-            <Button Grid.Row="1" x:Name="btnMyAccount" Height="120" Width="274" HorizontalAlignment="Left">
-                <Grid Width="250" HorizontalAlignment="Right">
+            <Button Grid.Row="1" x:Name="btnMyAccount" Height="120" Width="250" HorizontalAlignment="Left">
+                <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
-                    <Image Name="myAccountImage" Source="/Images/id.png" HorizontalAlignment="Right" Height="auto" Width="73" Margin="0,0,0,0"/>
-                    <TextBlock Text="My Account" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                    <Image Name="myAccountImage" Source="/Images/id1.png" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0"/>
+                    <TextBlock Text="My Account" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="12,0,0,0" FontSize="18"/>
                 </Grid>
             </Button>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Margin="0,2,0,0">
-            <Button Grid.Row="2" x:Name="btnMemberOuting" Height="120" Width="274" HorizontalAlignment="Left">
-                <Grid Width="250" HorizontalAlignment="Right">
+            <Button Grid.Row="2" x:Name="btnMemberOuting" Height="120" Width="250" HorizontalAlignment="Left" Click="btnMemberOuting_Click">
+                <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
-                    <Image Name="outingImage" Source="/Images/route.png" HorizontalAlignment="Right" Height="auto" Width="73" Margin="0,0,0,0"/>
+                    <Image Name="outingImage" Source="/Images/adventure1.png" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0"/>
                     <TextBlock Text="Outing" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0"/>
                 </Grid>
             </Button>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Margin="0,2,0,0">
-            <Button Grid.Row="3" x:Name="btnLogout" Height="120" Width="274" HorizontalAlignment="Left">
-            <Grid Width="230" HorizontalAlignment="Right">
+            <Button Grid.Row="3" x:Name="btnLogout" Height="120" Width="250" HorizontalAlignment="Left">
+                <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
-                    <Image Name="logoutImage" Source="/Images/shutdown.png" HorizontalAlignment="Right" Height="auto" Width="73" Margin="0,0,0,0"/>
+                    <Image Name="logoutImage" Source="/Images/shutdown1.png" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0"/>
                     <TextBlock Text="Logout" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
                 </Grid>
             </Button>
         </StackPanel>
-
     </Grid>
+    <Window.Resources>
+        <DataTemplate x:Name="outingTemplate" DataType="{x:Type viewmodels:MemberOutingViewModel}">
+            <views:OutingList>
+                
+            </views:OutingList>
+            
+        </DataTemplate>
+    </Window.Resources>
 </Window>

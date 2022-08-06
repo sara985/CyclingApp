@@ -21,8 +21,6 @@
 
     <ItemGroup>
       <Folder Include="DB\" />
-      <Folder Include="ViewModels\" />
-      <Folder Include="Views\" />
     </ItemGroup>
 
     <ItemGroup>
