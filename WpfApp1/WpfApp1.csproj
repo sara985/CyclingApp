@@ -17,6 +17,9 @@
     <ItemGroup>
       <None Remove="adventure.png" />
       <None Remove="bicycle.png" />
+      <None Remove="Images\adventure1.png" />
+      <None Remove="Images\id1.png" />
+      <None Remove="Images\shutdown1.png" />
     </ItemGroup>
 
     <ItemGroup>
@@ -38,6 +41,9 @@
     <ItemGroup>
       <Resource Include="adventure.png" />
       <Resource Include="bicycle.png" />
+      <Resource Include="Images\adventure1.png" />
+      <Resource Include="Images\id1.png" />
+      <Resource Include="Images\shutdown1.png" />
     </ItemGroup>
 
     <ItemGroup>

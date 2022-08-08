@@ -11,15 +11,17 @@
             <RowDefinition Height="6*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="infoList" Grid.Row="1" Content="Click on the list for more info/ for reservation" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
         <DataGrid x:Name="gridOuting" AutoGenerateColumns="False" SelectionUnit="FullRow">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Date" Width="*"/>
-                <DataGridTextColumn Header="Starting Hour" Width="*"/>
-                <DataGridTextColumn Header="Starting Point" Width="*"/>
-                <DataGridTextColumn Header="Category" Width="*"/>
+                <DataGridTextColumn Header="Date" Width="*" FontSize="18" FontWeight="Bold"/>
+                <DataGridTextColumn Header="Starting Hour" Width="*" FontSize="18"/>
+                <DataGridTextColumn Header="Starting Point" Width="*" FontSize="18"/>
+                <DataGridTextColumn Header="Category" Width="*" FontSize="18"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <Button x:Name="btnSeeOuting" Grid.Row="1" Content="More Info" HorizontalAlignment="Center" Width="394" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="0,2,0,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold"/>
 
     </Grid>
 </UserControl>
