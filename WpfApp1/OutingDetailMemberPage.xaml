@@ -5,20 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-         Title="Member Outing Page" Height="500" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" FontSize="18" Background="#FF39DD3B" Icon="/bicycle.png" >
+         Title="Outing Detail Page" Height="600" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" FontSize="18" Background="#FF39DD3B" Icon="/bicycle.png" >
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="120*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="50*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="49.901"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
         <Grid>
@@ -27,36 +29,50 @@
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150*"/>
-                <ColumnDefinition Width="300*"/>
-                <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
             <Label Name="lblDate" Content="Date:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" />
-            <TextBox x:Name="txtDate" Grid.Column="1" Width="185" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-            <Label Name="lblTime" Content="Time:" Grid.Column="2" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" />
-            <TextBox x:Name="txtTime" Grid.Column="3" Width="120" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <TextBox x:Name="txtDate" Grid.Column="1" Width="150" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <Label Name="lblCatOuting" Content="Category:" Grid.Column="2" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" />
+            <TextBox x:Name="txtCatOuting" Grid.Column="3" Width="150" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
         </Grid>
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Label Name="lblCatOuting" Content="Category:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" />
-            <TextBox x:Name="txtCatOuting" Grid.Column="1" Width="185" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <Label Name="lblStart" Content="Start at:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" />
+            <TextBox x:Name="txtStart" Grid.Column="1" Width="150" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <Label Name="lblFinish" Grid.Column="2" Content="Finish at:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" />
+            <TextBox x:Name="txtFinish" Grid.Column="3" Width="150" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
         </Grid>
 
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
             <Label Name="lblPlace" Content="Place:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" />
-            <TextBox x:Name="txtPlace" Grid.Column="1" Width="385" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <TextBox x:Name="txtPlace" Grid.Column="1" Width="400" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
         </Grid>
 
         <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label Name="lblParticipant" Content="Number of participant:" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" />
+            <TextBox Name="txtParticipant" Grid.Column="1" Width="100" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0" />
+        </Grid>
+
+
+        <Grid Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
@@ -67,7 +83,7 @@
             <TextBox x:Name="txtTransportCharge" Grid.Column="2" Width="85" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5,0,0,4"/>
         </Grid>
 
-        <Grid Grid.Row="5">
+        <Grid Grid.Row="7">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150*"/>
                 <ColumnDefinition Width="100*"/>
@@ -80,26 +96,24 @@
             <TextBox x:Name="txtAvailBike" Grid.Column="3" Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
         </Grid>
 
-        <Grid Grid.Row="6">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150*"/>
-                <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="150*"/>
-                <ColumnDefinition Width="100*"/>
-            </Grid.ColumnDefinitions>
-            <Label Name="lblRequestSeat" Content="Request Passanger Seat:" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Right" />
-            <TextBox x:Name="txtRequestSeat" Grid.Column="1" Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-            <Label Name="lblRequestBike" Grid.Column="2" Content="Request Place for Bike:" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" />
-            <TextBox x:Name="txtRequestBike" Grid.Column="3" Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-        </Grid>
-
         <Grid Grid.Row="8">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Label Name="lblRequestSeat" Content="Total Transport Request:" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Right" />
+            <TextBox x:Name="txtRequestSeat" Grid.Column="1" Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+        </Grid>
+
+        <Grid Grid.Row="10">
+            <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnBookOuting" Content="BOOK NOW" Width="200" Height="50" HorizontalAlignment="Center"/>
-            <Button x:Name="btnCloseOuting" Content="CLOSE" Width="200" Height="50" HorizontalAlignment="Center" Grid.Column="1"/>
+            <Button x:Name="btnBookOuting" Content="BOOK NOW" Width="200" Height="50" HorizontalAlignment="Center" Click="btnBookOuting_Click" VerticalAlignment="Bottom"/>
+            <Button x:Name="btnCloseOuting" Content="CLOSE" Width="200" Height="50" HorizontalAlignment="Center" Grid.Column="1" Click="btnCloseOuting_Click"/>
         </Grid>
 
 

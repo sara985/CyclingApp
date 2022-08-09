@@ -27,7 +27,7 @@ namespace WpfApp1
 
         private void btnMemberOuting_Click(object sender, RoutedEventArgs e)
         {
-            lblMainMember.Content = "Check our the list of outings";
+            lblMainMember.Content = "list of outings";
             DataContext = new MemberOutingViewModel();
         }
     }

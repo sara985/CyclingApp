@@ -23,5 +23,18 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void btnCloseOuting_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBookOuting_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            ConfirmBookingPage page = new ConfirmBookingPage();
+            page.Show();
+
+        }
     }
 }
