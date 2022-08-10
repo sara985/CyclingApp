@@ -253,3 +253,12 @@ paket-files/
 #other
 *.g.i.cs
 *.assets.cache
+WpfApp1/obj/Debug/net6.0-windows/WpfApp1_MarkupCompile.i.cache
+WpfApp1/obj/Debug/net6.0-windows/App.g.i.cs
+*.cache
+WpfApp1/obj/Debug/net6.0-windows/WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+WpfApp1/obj/Debug/net6.0-windows/WpfApp1.csproj.AssemblyReference.cache
+WpfApp1/obj/Debug/net6.0-windows/WpfApp1.assets.cache
+WpfApp1/obj/Debug/net6.0-windows/WpfApp1.AssemblyInfo.cs
+WpfApp1/obj/Debug/net6.0-windows/MainWindow.g.i.cs
+WpfApp1/obj/Debug/net6.0-windows/App.g.i.cs
