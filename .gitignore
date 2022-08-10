@@ -262,3 +262,7 @@ WpfApp1/obj/Debug/net6.0-windows/WpfApp1.assets.cache
 WpfApp1/obj/Debug/net6.0-windows/WpfApp1.AssemblyInfo.cs
 WpfApp1/obj/Debug/net6.0-windows/MainWindow.g.i.cs
 WpfApp1/obj/Debug/net6.0-windows/App.g.i.cs
+WpfApp1/obj/Debug/net6.0-windows/App.g.i.cs
+*.cache
+*.editorconfig
+WpfApp1/obj/Debug/net6.0-windows/MainWindow.g.i.cs
