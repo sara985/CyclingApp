@@ -24,5 +24,12 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
         }
+
+        private void btnConfirmBookCar_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Succesfully booked to this Outing");
+            var myWindow = Window.GetWindow(this);
+            myWindow.Close();
+        }
     }
 }

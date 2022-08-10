@@ -30,5 +30,10 @@ namespace WpfApp1
         {
             DataContext = new BookNoCarViewModel();
         }
+
+        private void RdBtnBookCar_Checked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new BookCarViewModel();
+        }
     }
 }

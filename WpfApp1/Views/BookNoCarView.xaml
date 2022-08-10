@@ -8,11 +8,14 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="No car arrangement? Then please hit CONFIRM" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
-        <Button x:Name="BtnConfirmNoCar" Content="CONFIRM" Width="150" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" FontSize="18" FontWeight="Bold" Click="BtnConfirmNoCar_Click"/>
-      
+        <Label Content="Choose your bycile and hit CONFIRM" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <Button x:Name="BtnConfirmNoCar" Content="CONFIRM" Width="150" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" FontSize="18" FontWeight="Bold" Click="BtnConfirmNoCar_Click"/>
+        <ComboBox x:Name="comboListBike" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="120" Height="80"/>
+
+
     </Grid>
 </UserControl>

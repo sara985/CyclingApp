@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp1.ViewModels
 {
-    internal class BookCarViewModel
+    public class BookCarViewModel
     {
     }
 }
