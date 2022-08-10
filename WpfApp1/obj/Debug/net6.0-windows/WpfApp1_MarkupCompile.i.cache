@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\App.xaml
-71706516704
+8-1225268542
 
-271071159227
+152074255039
 214-1120561264
-ConfirmBookingPage.xaml;LoginPage.xaml;MainWindow.xaml;NonAdminPage.xaml;OutingDetailMemberPage.xaml;Views\BookNoCarView.xaml;Views\OutingList.xaml;
+ConfirmBookingPage.xaml;LoginPage.xaml;MainWindow.xaml;NonAdminPage.xaml;OutingDetailMemberPage.xaml;Views\BookCarView.xaml;Views\BookNoCarView.xaml;Views\OutingList.xaml;
 
-True
+False
 

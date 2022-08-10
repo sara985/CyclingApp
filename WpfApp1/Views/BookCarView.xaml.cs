@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace WpfApp1.Views
 {
     /// <summary>
-    /// Interaction logic for BookNoCarView.xaml
+    /// Interaction logic for BookCarView.xaml
     /// </summary>
-    public partial class BookNoCarView : UserControl
+    public partial class BookCarView : UserControl
     {
-        public BookNoCarView()
+        public BookCarView()
         {
             InitializeComponent();
-        }
-
-        private void BtnConfirmNoCar_Click(object sender, RoutedEventArgs e)
-
-        {
-            MessageBox.Show("Succesfully booked to this Outing");
-            var myWindow = Window.GetWindow(this);
-            myWindow.Close();
-
-
         }
     }
 }

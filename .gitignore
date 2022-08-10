@@ -8,3 +8,13 @@ C:\Users\Sarah\Documents\GitHub\CyclingApp\.vs\WpfApp1\DesignTimeBuild
 
 /.vs/CyclingApp/v17
 /.vs/WpfApp1/FileContentIndex
+*.v2
+.vs/WpfApp1/v17/.suo
+*.dll
+WpfApp1/bin/Debug/net6.0-windows/WpfApp1.pdb
+WpfApp1/obj/Debug/net6.0-windows/WpfApp1_3vppjizf_wpftmp.AssemblyInfo.cs
+*.cache
+*.editorconfig
+*.BuildWithSkipAnalyzers
+*.user
+WpfApp1/obj/Debug/net6.0-windows/WpfApp1_MarkupCompile.i.lref
