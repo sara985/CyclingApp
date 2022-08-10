@@ -37,14 +37,14 @@
                 Grid.Row="1"
                 Grid.Column="0"
                 Margin="0,5,52,0"
-                Text="{Binding FloorNumber}"/>
+                Text="{}"/>
 
             <TextBlock Grid.Row="0"  Grid.Column="2" Text="Last Name" />
             <TextBox
                 Grid.Row="1"
                 Grid.Column="2"
                 Margin="10 5 0 0"
-                Text="{Binding RoomNumber}" />
+                Text="{}" />
         </Grid>
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
