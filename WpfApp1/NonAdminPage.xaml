@@ -51,14 +51,14 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Margin="0,2,0,0">
-            <Button Grid.Row="3" x:Name="btnLogout" Height="120" Width="250" HorizontalAlignment="Left">
+            <Button Grid.Row="3" x:Name="btnLogout" Height="120" Width="250" HorizontalAlignment="Left" Click="btnLogout_Click">
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
                     <Image Name="logoutImage" Source="/Images/shutdown1.png" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0"/>
-                    <TextBlock Text="Logout" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                    <TextBlock Text="Logout" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,0,21"/>
                 </Grid>
             </Button>
         </StackPanel>
@@ -66,9 +66,9 @@
     <Window.Resources>
         <DataTemplate x:Name="outingTemplate" DataType="{x:Type viewmodels:MemberOutingViewModel}">
             <views:OutingList>
-                
+
             </views:OutingList>
-            
+
         </DataTemplate>
     </Window.Resources>
 </Window>

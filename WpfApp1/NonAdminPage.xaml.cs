@@ -30,5 +30,11 @@ namespace WpfApp1
             lblMainMember.Content = "list of outings";
             DataContext = new MemberOutingViewModel();
         }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Thank you, see you next time");
+            this.Close();
+        }
     }
 }

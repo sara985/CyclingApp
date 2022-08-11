@@ -35,5 +35,10 @@ namespace WpfApp1
         {
             DataContext = new BookCarViewModel();
         }
+
+        private void RdBtnOfferCar_Checked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new OfferPickupViewModel();
+        }
     }
 }
