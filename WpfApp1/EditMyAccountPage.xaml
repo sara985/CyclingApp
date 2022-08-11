@@ -25,7 +25,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="9*"/>
             <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
         
         <Label Content="Update My Account" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3"/>
@@ -39,7 +39,7 @@
         <Label Grid.Row="4" Content="Phone:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
         <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtPhone" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40"/>
         <Button Grid.Row="5" Grid.Column="1" x:Name="btnMyBikes" Content="My Bycicle(s)" Width="150" Height="40" HorizontalAlignment="Left" Click="btnMyBikes_Click"/>
-        <Button Grid.Row="6" Grid.Column="1" x:Name="btnMyCategory" Content="My Category(es)" Width="150" Height="40" HorizontalAlignment="Left"/>
+        <Button Grid.Row="6" Grid.Column="1" x:Name="btnMyCategory" Content="My Category(es)" Width="150" Height="40" HorizontalAlignment="Left" Click="btnMyCategory_Click"/>
 
         <Grid Grid.Row="7" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
@@ -55,8 +55,12 @@
     </Grid>
 
     <Window.Resources>
-        <DataTemplate x:Name="bicicleEdiTemplate" DataType="{x:Type viewmodels:EditBikeViewModel}">
+        <DataTemplate x:Name="bicicleModifTemplate" DataType="{x:Type viewmodels:EditBikeViewModel}">
             <views:EditBikeView></views:EditBikeView>
+        </DataTemplate>
+
+        <DataTemplate x:Name="categoryModifTemplate" DataType="{x:Type viewmodels:UpdateCategoryViewModel}">
+            <views:UpdateCategoryView></views:UpdateCategoryView>
         </DataTemplate>
     </Window.Resources>
 </Window>

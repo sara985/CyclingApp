@@ -39,5 +39,10 @@ namespace WpfApp1
         {
             DataContext = new EditBikeViewModel();
         }
+
+        private void btnMyCategory_Click(object sender, RoutedEventArgs e)
+        {
+           DataContext = new UpdateCategoryViewModel();
+        }
     }
 }
