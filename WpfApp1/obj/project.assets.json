@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jkten\\.nuget\\packages\\": {}
+    "C:\\Users\\Sarah\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jkten\\Documents\\GitHub\\CyclingApp\\WpfApp1\\WpfApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Sarah\\Documents\\GitHub\\CyclingApp\\WpfApp1\\WpfApp1.csproj",
       "projectName": "WpfApp1",
-      "projectPath": "C:\\Users\\jkten\\Documents\\GitHub\\CyclingApp\\WpfApp1\\WpfApp1.csproj",
-      "packagesPath": "C:\\Users\\jkten\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jkten\\Documents\\GitHub\\CyclingApp\\WpfApp1\\obj\\",
+      "projectPath": "C:\\Users\\Sarah\\Documents\\GitHub\\CyclingApp\\WpfApp1\\WpfApp1.csproj",
+      "packagesPath": "C:\\Users\\Sarah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sarah\\Documents\\GitHub\\CyclingApp\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jkten\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sarah\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
