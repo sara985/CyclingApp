@@ -24,5 +24,11 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
         }
+
+        private void btnSeeOuting_Click(object sender, RoutedEventArgs e)
+        {
+            OutingDetailMemberPage page = new OutingDetailMemberPage();
+            page.ShowDialog();
+        }
     }
 }

@@ -98,8 +98,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnBookOuting" Content="BOOK NOW" Width="200" Height="50" HorizontalAlignment="Center"/>
-            <Button x:Name="btnCloseOuting" Content="CLOSE" Width="200" Height="50" HorizontalAlignment="Center" Grid.Column="1"/>
+            <Button x:Name="btnBookOuting" Content="BOOK NOW" Width="200" Height="50" HorizontalAlignment="Center" Click="btnBookOuting_Click"/>
+            <Button x:Name="btnCloseOuting" Content="CLOSE" Width="200" Height="50" HorizontalAlignment="Center" Grid.Column="1" Click="btnCloseOuting_Click"/>
         </Grid>
 
 
