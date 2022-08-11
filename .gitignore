@@ -19,3 +19,17 @@ WpfApp1/obj/Debug/net6.0-windows/WpfApp1_3vppjizf_wpftmp.AssemblyInfo.cs
 *.user
 WpfApp1/obj/Debug/net6.0-windows/WpfApp1_MarkupCompile.i.lref
 .vs/WpfApp1/v17/.suo
+WpfApp1/WpfApp1.csproj.user
+*.user
+*.dll
+WpfApp1/obj/Debug/net6.0-windows/ref/WpfApp1.dll
+.vs/WpfApp1/v17/.suo
+.vs/ProjectEvaluation/wpfapp1.metadata.v2
+*.v2
+*.v1
+*.cache
+*.lref
+WpfApp1/obj/Debug/net6.0-windows/WpfApp1_nginspzf_wpftmp.AssemblyInfo.cs
+*.props
+*.targets
+.vs/WpfApp1/v17/.suo
