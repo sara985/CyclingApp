@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.Views;
 
 namespace WpfApp1
 {
@@ -34,9 +35,16 @@ namespace WpfApp1
             {
                 this.Visibility = Visibility.Collapsed;
                 NonAdminPage membermain = new NonAdminPage();
-                membermain.ShowDialog();
+                membermain.ShowDialog();               
             }
             
+        }
+
+        private void btnSignupClick(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Collapsed;
+            SignupWindow signup = new SignupWindow();
+            signup.ShowDialog();
         }
     }
 }
