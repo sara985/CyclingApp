@@ -1,0 +1,130 @@
+﻿<UserControl x:Class="WpfApp1.Views.MyAccountView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="460" d:DesignWidth="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="gridNameMail">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="150*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="First Name:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
+            <TextBox Grid.Column="1" Name="txtFirstName" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <Label Grid.Column="2" Content="Last Name:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
+            <TextBox Grid.Column="3" Name="txtLastName" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <Label Grid.Column="4" Content="E-mail:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
+            <TextBox Grid.Column="5" Name="txtMail" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Name="gridPhoneBalance">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="150*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Phone:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
+            <TextBox Grid.Column="1" Name="txtPhone" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <Label Grid.Column="2" Content="Balance:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
+            <TextBox Grid.Column="3" Name="txtBalance" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+        </Grid>
+
+        <Grid Grid.Row="2" Name="gridCatBike">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="140*"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="330*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Category:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
+            <ComboBox Grid.Column="1" Name="comboCategory" Width="250" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <Label Grid.Column="2" Content="Bycicle:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
+            <ComboBox Grid.Column="3" Name="comboBike" Width="430" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+        </Grid>
+
+        <Label Grid.Row="3" Content="List of Booked Incoming Outings" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14"/>
+
+        <DataGrid Grid.Row="4" x:Name="datagridOutingsBooked" AutoGenerateColumns="False" SelectionUnit="FullRow" Margin="5,0,5,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Width="10*" FontSize="12">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Starting Hour" Width="10*" FontSize="12">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Finishing Hour" Width="10*" FontSize="12">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Starting Point" Width="15*" FontSize="12">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Category" Width="15*" FontSize="12">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="(transport)Status" Width="10*" FontSize="12"> <!--transport status = none/driver/passanger-->
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>  
+            </DataGrid.Columns>
+            
+            
+        </DataGrid>
+
+        <Button Grid.Row="5" x:Name="btnUpdateMyAccount" Content="Update" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnUpdateMyAccount_Click"/>
+
+
+
+    </Grid>
+</UserControl>
