@@ -30,5 +30,11 @@ namespace WpfApp1
             lblMainMember.Content = "Check our the list of outings";
             DataContext = new MemberOutingViewModel();
         }
+
+        private void btnMyAccount_Click(object sender, RoutedEventArgs e)
+        {
+            lblMainMember.Content = "My Account";
+            DataContext= new MyAccountViewModel();
+        }
     }
 }
