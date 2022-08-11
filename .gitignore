@@ -267,3 +267,7 @@ WpfApp1/obj/Debug/net6.0-windows/App.g.i.cs
 *.editorconfig
 WpfApp1/obj/Debug/net6.0-windows/MainWindow.g.i.cs
 WpfApp1/obj/Debug/net6.0-windows/WpfApp1_MarkupCompile.i.cache
+
+bin
+obj
+.vs
