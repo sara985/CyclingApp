@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:WpfApp1"
              StartupUri="LoginPage.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock" x:Key="Header">
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
     </Application.Resources>
 </Application>
