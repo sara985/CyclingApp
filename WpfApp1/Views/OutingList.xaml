@@ -21,7 +21,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button x:Name="btnSeeOuting" Grid.Row="1" Content="More Info" HorizontalAlignment="Center" Width="394" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="0,2,0,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnSeeOuting" Grid.Row="1" Content="More Info" HorizontalAlignment="Center" Width="394" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="0,2,0,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold" Click="btnSeeOuting_Click"/>
 
     </Grid>
 </UserControl>
