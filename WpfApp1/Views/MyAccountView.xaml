@@ -122,7 +122,7 @@
             
         </DataGrid>
 
-        <Button Grid.Row="5" x:Name="btnUpdateMyAccount" Content="Update" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Grid.Row="5" x:Name="btnUpdateMyAccount" Content="Update" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnUpdateMyAccount_Click"/>
 
 
 

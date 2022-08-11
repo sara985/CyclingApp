@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace WpfApp1.Views
 {
     /// <summary>
-    /// Interaction logic for MyAccountView.xaml
+    /// Interaction logic for EditBikeView.xaml
     /// </summary>
-    public partial class MyAccountView : UserControl
+    public partial class EditBikeView : UserControl
     {
-        public MyAccountView()
+        public EditBikeView()
         {
             InitializeComponent();
-        }
-
-        private void btnUpdateMyAccount_Click(object sender, RoutedEventArgs e)
-        {
-            EditMyAccountPage page = new EditMyAccountPage();
-            page.ShowDialog();
         }
     }
 }
