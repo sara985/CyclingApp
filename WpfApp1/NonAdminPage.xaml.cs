@@ -36,5 +36,11 @@ namespace WpfApp1
             MessageBox.Show("Thank you, see you next time");
             this.Close();
         }
+
+        private void btnMyAccount_Click(object sender, RoutedEventArgs e)
+        {
+            lblMainMember.Content = "My Account";
+            DataContext = new MyAccountViewModel();
+        }
     }
 }

@@ -7,7 +7,7 @@
         xmlns:views="clr-namespace:WpfApp1.Views"
         xmlns:viewmodels="clr-namespace:WpfApp1.ViewModels"
         mc:Ignorable="d"
-        Title="Cycling Club"  Name="CyClbMemberMain" Height="540" Width="1200" FontSize="24" FontWeight="Bold"  Background="#FF39DD3B" Icon="/bicycle.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+        Title="Cycling Club"  Name="CyClbMemberMain" Height="600" Width="1200" FontSize="24" FontWeight="Bold"  Background="#FF39DD3B" Icon="/bicycle.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -15,17 +15,17 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
         <Image Source="/bicycle.png" />
         <ContentControl Content="{Binding}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Height="auto" Width="auto"/>
-        <Label x:Name="lblMainMember" Content="Cycling Club Mons" Grid.Column="1" HorizontalAlignment="Center" Margin="212,10,0,0" VerticalAlignment="Top" FontSize="36" Height="58" Width="324"/>
+        <Label x:Name="lblMainMember" Content="Cycling Club Mons" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Height="58" Width="324"/>
 
         <StackPanel Grid.Row="1" Margin="0,2,0,0">
-            <Button Grid.Row="1" x:Name="btnMyAccount" Height="120" Width="250" HorizontalAlignment="Left">
+            <Button Grid.Row="1" x:Name="btnMyAccount" Height="120" Width="250" HorizontalAlignment="Left" Click="btnMyAccount_Click">
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -63,12 +63,16 @@
             </Button>
         </StackPanel>
     </Grid>
+    
     <Window.Resources>
         <DataTemplate x:Name="outingTemplate" DataType="{x:Type viewmodels:MemberOutingViewModel}">
             <views:OutingList>
-
             </views:OutingList>
+        </DataTemplate>
 
+        <DataTemplate x:Name="MyAccountTemplate" DataType="{x:Type viewmodels:MyAccountViewModel}">
+            <views:MyAccountView></views:MyAccountView>
         </DataTemplate>
     </Window.Resources>
+    
 </Window>
