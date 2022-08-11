@@ -10,25 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1.Views
 {
     /// <summary>
-    /// Logique d'interaction pour Signup.xaml
+    /// Logique d'interaction pour SignupWindow.xaml
     /// </summary>
-    public partial class Signup : Page
+    public partial class SignupWindow : Window
     {
-        public Signup()
+        public SignupWindow()
         {
             InitializeComponent();
-        }
-
-        private void btn_next_click(object sender, RoutedEventArgs e)
-        {
-            
-           
+            signupFrame.Content = new Signup();
         }
     }
 }
