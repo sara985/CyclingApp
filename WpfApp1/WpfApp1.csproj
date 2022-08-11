@@ -8,7 +8,42 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Models" />
+      <Compile Remove="Models\**" />
+      <EmbeddedResource Remove="Models\**" />
+      <None Remove="Models\**" />
+      <Page Remove="Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="adventure.png" />
+      <None Remove="bicycle.png" />
+      <None Remove="Images\adventure1.png" />
+      <None Remove="Images\id1.png" />
+      <None Remove="Images\shutdown1.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="DB\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="adventure.png" />
+      <Resource Include="bicycle.png" />
+      <Resource Include="Images\adventure1.png" />
+      <Resource Include="Images\id1.png" />
+      <Resource Include="Images\shutdown1.png" />
     </ItemGroup>
 
     <ItemGroup>

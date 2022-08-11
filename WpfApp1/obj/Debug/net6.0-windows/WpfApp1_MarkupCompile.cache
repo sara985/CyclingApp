@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Sarah\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\
 WpfApp1
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Sarah\Documents\GitHub\CyclingApp\WpfApp1\App.xaml
-11407045341
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\App.xaml
+5-1644543832
 
-3-1233169557
-194-1951243044
-MainWindow.xaml;
+22472207182
+214-1120561264
+LoginPage.xaml;MainWindow.xaml;NonAdminPage.xaml;OutingDetailMemberPage.xaml;Views\OutingList.xaml;
 
 False
 
