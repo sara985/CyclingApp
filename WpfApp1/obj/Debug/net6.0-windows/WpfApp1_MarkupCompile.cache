@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\App.xaml
-8-1225268542
+1349158249
 
-132144900581
+21-626542348
 214-1120561264
-ConfirmBookingPage.xaml;LoginPage.xaml;MainWindow.xaml;NonAdminPage.xaml;OutingDetailMemberPage.xaml;Views\BookCarView.xaml;Views\BookNoCarView.xaml;Views\OutingList.xaml;
+ByciclePage.xaml;ConfirmBookingPage.xaml;EditMyAccountPage.xaml;LoginPage.xaml;MainWindow.xaml;NonAdminPage.xaml;OutingDetailMemberPage.xaml;Views\BookCarView.xaml;Views\BookNoCarView.xaml;Views\EditBikeView.xaml;Views\MyAccountView.xaml;Views\OfferPickupView.xaml;Views\OutingList.xaml;
 
 False
 

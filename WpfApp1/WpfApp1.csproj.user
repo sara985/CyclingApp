@@ -5,6 +5,9 @@
     <Compile Update="ConfirmBookingPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="EditMyAccountPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -20,12 +23,24 @@
     <Compile Update="Views\BookNoCarView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EditBikeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MyAccountView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OfferPickupView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\OutingList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ConfirmBookingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditMyAccountPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LoginPage.xaml">
@@ -41,6 +56,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\BookNoCarView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditBikeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MyAccountView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OfferPickupView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\OutingList.xaml">

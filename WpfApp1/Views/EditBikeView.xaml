@@ -8,7 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="6*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -19,17 +21,19 @@
                 <DataGridTextColumn Header="Length" Width="*" FontSize="18"/>
             </DataGrid.Columns>
         </DataGrid>
-
-        <Grid Grid.Row="1">
+        <Button Grid.Row="1" x:Name="btnDeleteBike" Content="Delete" HorizontalAlignment="Left" Width="150" Height="30" VerticalContentAlignment="Top" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold" Margin="168,7,0,38"/>
+        <Label Grid.Row="2" Content="Add New Bycicle" HorizontalAlignment="Center" Height="30" VerticalAlignment="Bottom" FontSize="14" FontWeight="Bold" />
+        <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="50*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnAddNewBike" Content="Add New Bike" HorizontalAlignment="Center" Width="150" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="0,2,0,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold"/>
-            <Button Grid.Column="1" x:Name="btnEditBike" Content="Edit" HorizontalAlignment="Center" Width="150" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="0,2,0,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold"/>
-            <Button Grid.Column="2" x:Name="btnDeleteBike" Content="Delete" HorizontalAlignment="Center" Width="150" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="0,2,0,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold"/>
+            <ComboBox x:Name="bikeType" Text="Type" Height="40" Width="150" HorizontalAlignment="Center" IsReadOnly="True" />
+            <TextBox Grid.Column="1" x:Name="txtWght" Text="Weight(Kg)" Cursor="None"/>
+            <Button Grid.Column="3" x:Name="btnSaveNewBike" Content="Save" Width="50" Height="30" Background="#FFE7E7AE"/>
         </Grid>
-        
+
     </Grid>
 </UserControl>

@@ -87,3 +87,13 @@ C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\View
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\BookNoCarView.baml
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\BookCarView.g.cs
 C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\BookCarView.baml
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\OfferPickupView.g.cs
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\OfferPickupView.baml
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\MyAccountView.g.cs
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\MyAccountView.baml
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\EditMyAccountPage.g.cs
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\EditBikeView.g.cs
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\EditMyAccountPage.baml
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\Views\EditBikeView.baml
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\ByciclePage.g.cs
+C:\Users\jkten\Documents\GitHub\CyclingApp\WpfApp1\obj\Debug\net6.0-windows\ByciclePage.baml
