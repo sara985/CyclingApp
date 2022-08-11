@@ -13,21 +13,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1.Views
+namespace WpfApp1
 {
     /// <summary>
-    /// Logique d'interaction pour Signup.xaml
+    /// Logique d'interaction pour BikeUserControl.xaml
     /// </summary>
-    public partial class Signup : Page
+    public partial class BikeUserControl : UserControl
     {
-        public Signup()
+        public BikeUserControl()
         {
             InitializeComponent();
         }
 
-        private void btn_next_click(object sender, RoutedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            NavigationService.Navigate(new SignupAddVehicle());       
+
+        }
+        private void btn_addBikeClick(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

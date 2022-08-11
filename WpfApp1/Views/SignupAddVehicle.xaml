@@ -43,6 +43,6 @@
             <TextBox x:Name="txtbox_email" Grid.Row="1" Grid.Column="0"/>
             <TextBox x:Name="txtbox_password" Grid.Row="1" Grid.Column="1"/>
         </Grid>
-        <Button x:Name="btn_gotobike" Grid.Row="4">Next</Button>
+        <Button x:Name="btn_gotobike" Grid.Row="4" Click="btn_goToBikeClick">Next</Button>
     </Grid>
 </Page>

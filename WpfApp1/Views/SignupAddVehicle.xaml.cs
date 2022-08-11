@@ -24,5 +24,10 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
         }
+
+        public void btn_goToBikeClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SignupAddBikes());
+        }
     }
 }
