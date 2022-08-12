@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WpfApp1.POCO
 {
-    class Member
+    class Member : INotifyPropertyChanged
     {
         //TODO encrypt password
         private int id;
@@ -34,6 +35,12 @@ namespace WpfApp1.POCO
             _balance = balance;
         }
 
+        public Member(string email, string password)
+        {
+            this.email=email;
+            this.password=password;
+        }
+
         public int Id { get => id; set => id = value; }
         public string Firstname { get => firstname; set => firstname = value; }
         public string Lastname { get => lastname; set => lastname = value; }
@@ -42,6 +49,8 @@ namespace WpfApp1.POCO
         public string Phone { get => phone; set => phone = value; }
         public string Password { get => password; set => password = value; }
         public float Balance { get => _balance; set => _balance = value; }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public override string? ToString()
         {
