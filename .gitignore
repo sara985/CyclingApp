@@ -271,3 +271,4 @@ WpfApp1/obj/Debug/net6.0-windows/WpfApp1_MarkupCompile.i.cache
 bin
 obj
 .vs
+/WpfApp1/App.config

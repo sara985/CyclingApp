@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
 using WpfApp1.POCO;
+using System.Configuration;
 
 namespace WpfApp1.DAO
 {
@@ -11,7 +11,7 @@ namespace WpfApp1.DAO
     {
         public void Insert(Member t)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Delete(Member t)
@@ -26,7 +26,39 @@ namespace WpfApp1.DAO
 
         public List<Member> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Member> list = new List<Member>();
+                Console.WriteLine(ConfigurationManager.AppSettings["connectionString"]);
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
+                {
+                    SqlCommand cmd = new SqlCommand("Select * from dbo.member", connection);
+                    connection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Member m = new Member();
+                            m.Id = reader.GetInt32(0);
+                            m.Firstname = reader.GetString(1);
+                            m.Lastname = reader.GetString(2);
+                            m.Email = reader.GetString(3);
+                            m.Phone = reader.GetString(4);
+                            m.Password = reader.GetString(5);
+                            m.Position = reader.GetInt32(6);
+                            m.Balance = 0;
+                            list.Add(m);
+                        }
+                    }
+                }
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("exception");
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
 
         public void Update(Member t)
