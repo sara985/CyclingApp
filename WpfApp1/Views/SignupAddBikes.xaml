@@ -13,8 +13,15 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Add your bike(s)" Style="{StaticResource Header}"/>
-        <uc:BikeUserControl Grid.Row="1"/>
+        <StackPanel x:Name="myStackBike" Grid.Row="1">
+            <uc:BikeUserControl/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" FlowDirection="RightToLeft">
+            <Button x:Name="btn_delBike" Content="-" Click="btn_delBike_Click"/>
+            <Button x:Name="btn_addBike" Content="+" Click="btn_addBikeClick"/>
+        </StackPanel>
     </Grid>
 </Page>

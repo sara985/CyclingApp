@@ -11,23 +11,25 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <TextBlock Text="Bike's name" Grid.Row="0" Grid.Column="0" />
-        <TextBlock Text="Bike's length" Grid.Row="1" Grid.Column="0" />
-        <TextBlock Text="Bike's weight" Grid.Row="1" Grid.Column="1" />
-        <ComboBox Grid.Column="1" SelectionChanged="ComboBox_SelectionChanged" >
+        <TextBox x:Name="txt_bikeName" Grid.Row="1" Grid.Column="0"/>
+        <TextBlock Text="Bike's length" Grid.Row="2" Grid.Column="0" />
+        <TextBox x:Name="txt_bikelength" Grid.Row="3" Grid.Column="0"/>
+        <TextBlock Text="Bike's weight" Grid.Row="2" Grid.Column="1" />
+        <TextBox x:Name="txt_bikeweight" Grid.Row="3" Grid.Column="1"/>
+        <TextBlock Text="Bike's type" Grid.Row="0" Grid.Column="1" />
+        <ComboBox Grid.Column="1" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" >
             <ComboBoxItem Content = "Cyclo" />
             <ComboBoxItem Content = "Mountain bike" />
             <ComboBoxItem Content = "Downhill" />
         </ComboBox>
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" FlowDirection="RightToLeft">
-            <Button x:Name="btn_delBike" Content="-"/>
-            <Button x:Name="btn_addBike" Content="+" Click="btn_addBikeClick"/>
-        </StackPanel>
+
 
     </Grid>
 </UserControl>

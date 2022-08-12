@@ -24,6 +24,15 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
         }
+        private void btn_addBikeClick(object sender, RoutedEventArgs e)
+        {
+            myStackBike.Children.Add(new BikeUserControl());
+        }
 
+        private void btn_delBike_Click(object sender, RoutedEventArgs e)
+        {
+            int lastUIElement = myStackBike.Children.Count - 1;
+            myStackBike.Children.RemoveAt(lastUIElement);
+        }
     }
 }
