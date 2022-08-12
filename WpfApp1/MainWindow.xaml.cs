@@ -26,7 +26,10 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        
-
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Thank you, have a nice day");
+            App.Current.Shutdown();
+        }
     }
 }
