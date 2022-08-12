@@ -39,7 +39,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Margin="0,2,0,0">
-            <Button Grid.Row="2" x:Name="btnCharges" Height="100" Width="250" HorizontalAlignment="Left" >
+            <Button Grid.Row="2" x:Name="btnCharges" Height="100" Width="250" HorizontalAlignment="Left" Click="btnCharges_Click" >
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -81,6 +81,10 @@
     <Window.Resources>
         <DataTemplate x:Name="invoiceTemplate" DataType="{x:Type viewmodels:InvoiceViewModel}">
             <views:InvoiceListView></views:InvoiceListView>
+        </DataTemplate>
+
+        <DataTemplate x:Name="ChargesTemplate" DataType="{x:Type viewmodels:ChargesViewModel}">
+            <views:ChargesListView></views:ChargesListView>
         </DataTemplate>
     </Window.Resources>
 </Window>

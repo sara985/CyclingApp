@@ -33,8 +33,14 @@ namespace WpfApp1
 
         private void btnInvoices_Click(object sender, RoutedEventArgs e)
         {
-            //lblMainTreasur.Content = "List of Invoices";
+            lblMainTreasur.Content = "List of Pending Invoices";
             DataContext = new InvoiceViewModel();
+        }
+
+        private void btnCharges_Click(object sender, RoutedEventArgs e)
+        {
+            lblMainTreasur.Content = "List of Charges";
+            DataContext = new ChargesViewModel();
         }
     }
 }
