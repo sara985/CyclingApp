@@ -53,7 +53,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Margin="0,2,0,0">
-            <Button Grid.Row="3" x:Name="btnMemberOuting" Height="100" Width="250" HorizontalAlignment="Left">
+            <Button Grid.Row="3" x:Name="btnMemberOuting" Height="100" Width="250" HorizontalAlignment="Left" Click="btnMemberOuting_Click">
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -81,13 +81,12 @@
 
 
     <Window.Resources>
-        <DataTemplate x:Name="outingTemplate" DataType="{x:Type viewmodels:MemberOutingViewModel}">
-            <views:OutingList>
-            </views:OutingList>
-        </DataTemplate>
-
         <DataTemplate x:Name="myAccountTemplate" DataType="{x:Type viewmodels:MyAccountViewModel}">
             <views:MyAccountView></views:MyAccountView>
+        </DataTemplate>
+
+        <DataTemplate x:Name="MngOutingTemplate" DataType="{x:Type viewmodels:MgrOutingListViewModel}">
+            <views:MgrOutingListView></views:MgrOutingListView>
         </DataTemplate>
     </Window.Resources>
 
