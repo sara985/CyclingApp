@@ -20,6 +20,7 @@
       <None Remove="Images\adventure1.png" />
       <None Remove="Images\id1.png" />
       <None Remove="Images\shutdown1.png" />
+      <None Remove="Images\team.png" />
     </ItemGroup>
 
     <ItemGroup>
@@ -46,6 +47,7 @@
       <Resource Include="Images\adventure1.png" />
       <Resource Include="Images\id1.png" />
       <Resource Include="Images\shutdown1.png" />
+      <Resource Include="Images\team.png" />
     </ItemGroup>
 
     <ItemGroup>

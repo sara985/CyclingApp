@@ -30,5 +30,11 @@ namespace WpfApp1.Views
             OutingDetailMemberPage page = new OutingDetailMemberPage();
             page.ShowDialog();
         }
+
+        private void btnAddOuting_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewOutingPage page = new AddNewOutingPage();
+            page.ShowDialog();
+        }
     }
 }
