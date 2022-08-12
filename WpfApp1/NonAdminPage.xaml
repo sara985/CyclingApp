@@ -63,6 +63,8 @@
             </Button>
         </StackPanel>
     </Grid>
+    
+    
     <Window.Resources>
         <DataTemplate x:Name="outingTemplate" DataType="{x:Type viewmodels:MemberOutingViewModel}">
             <views:OutingList>
@@ -72,8 +74,5 @@
         <DataTemplate x:Name="myAccountTemplate" DataType="{x:Type viewmodels:MyAccountViewModel}">
             <views:MyAccountView></views:MyAccountView>
         </DataTemplate>
-
-        
-        
     </Window.Resources>
 </Window>
