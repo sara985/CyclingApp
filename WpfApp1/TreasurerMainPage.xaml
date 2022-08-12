@@ -23,7 +23,7 @@
         </Grid.RowDefinitions>
         <Image Source="/bicycle.png" />
         <ContentControl Content="{Binding}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Height="auto" Width="auto"/>
-        <Label x:Name="lblMainTreasur" Content="Cycling Club Mons Treasurer Page" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Height="58"/>
+        <Label x:Name="lblMainTreasur" Content="Cycling Club Mons - Treasurer Page" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Height="58"/>
 
         <StackPanel Grid.Row="1" Margin="0,2,0,0">
             <Button Grid.Row="1" x:Name="btnInvoices" Height="100" Width="250" HorizontalAlignment="Left" Click="btnInvoices_Click" >
@@ -52,7 +52,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Margin="0,2,0,0">
-            <Button Grid.Row="3" x:Name="btnToPay" Height="100" Width="250" HorizontalAlignment="Left" >
+            <Button Grid.Row="3" x:Name="btnToPay" Height="100" Width="250" HorizontalAlignment="Left" Click="btnToPay_Click" >
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -85,6 +85,10 @@
 
         <DataTemplate x:Name="ChargesTemplate" DataType="{x:Type viewmodels:ChargesViewModel}">
             <views:ChargesListView></views:ChargesListView>
+        </DataTemplate>
+
+        <DataTemplate x:Name="PayTransportTemplate" DataType="{x:Type viewmodels:PayTransportViewModel}">
+            <views:PayTransportViews></views:PayTransportViews>
         </DataTemplate>
     </Window.Resources>
 </Window>

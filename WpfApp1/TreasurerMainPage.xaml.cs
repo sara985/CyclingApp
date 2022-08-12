@@ -42,5 +42,11 @@ namespace WpfApp1
             lblMainTreasur.Content = "List of Charges";
             DataContext = new ChargesViewModel();
         }
+
+        private void btnToPay_Click(object sender, RoutedEventArgs e)
+        {
+            lblMainTreasur.Content = "List of Payment to be made to drivers";
+            DataContext=new PayTransportViewModel();
+        }
     }
 }
