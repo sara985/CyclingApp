@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="SignupWindow" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="signupFrame"/>
+        <Frame x:Name="signupFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
