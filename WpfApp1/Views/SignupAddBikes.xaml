@@ -9,8 +9,9 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SignupAddBikes">
 
-    <Grid>
+    <Grid x:Name="ScrollGrid">
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -19,9 +20,10 @@
         <StackPanel x:Name="myStackBike" Grid.Row="1">
             <uc:BikeUserControl/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" FlowDirection="RightToLeft">
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" FlowDirection="RightToLeft">
             <Button x:Name="btn_delBike" Content="-" Click="btn_delBike_Click"/>
             <Button x:Name="btn_addBike" Content="+" Click="btn_addBikeClick"/>
         </StackPanel>
+        <Button x:Name="btn_Signup" Content="Sign up" Grid.Row="3"/>
     </Grid>
 </Page>

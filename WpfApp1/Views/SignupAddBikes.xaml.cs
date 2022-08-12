@@ -23,6 +23,10 @@ namespace WpfApp1.Views
         public SignupAddBikes()
         {
             InitializeComponent();
+            ScrollViewer myScrollViewer = new ScrollViewer();
+            myScrollViewer.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
+            myScrollViewer.Content = ScrollGrid;
+            Content = myScrollViewer;
         }
         private void btn_addBikeClick(object sender, RoutedEventArgs e)
         {
