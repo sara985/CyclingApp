@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1
 {
@@ -28,6 +29,12 @@ namespace WpfApp1
         {
             MessageBox.Show("Thank you, have a nice day");
             App.Current.Shutdown();
+        }
+
+        private void btnInvoices_Click(object sender, RoutedEventArgs e)
+        {
+            //lblMainTreasur.Content = "List of Invoices";
+            DataContext = new InvoiceViewModel();
         }
     }
 }

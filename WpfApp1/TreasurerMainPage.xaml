@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:views="clr-namespace:WpfApp1.Views"
+        xmlns:viewmodels="clr-namespace:WpfApp1.ViewModels"
         mc:Ignorable="d"
         Title="TreasurerMainPage" Height="540" Width="1200" FontSize="24" FontWeight="Bold"  Background="#FF39DD3B" Icon="/bicycle.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid>
@@ -24,7 +26,7 @@
         <Label x:Name="lblMainTreasur" Content="Cycling Club Mons Treasurer Page" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Height="58"/>
 
         <StackPanel Grid.Row="1" Margin="0,2,0,0">
-            <Button Grid.Row="1" x:Name="btnInvoices" Height="100" Width="250" HorizontalAlignment="Left" >
+            <Button Grid.Row="1" x:Name="btnInvoices" Height="100" Width="250" HorizontalAlignment="Left" Click="btnInvoices_Click" >
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -75,4 +77,10 @@
             </Button>
         </StackPanel>
     </Grid>
+
+    <Window.Resources>
+        <DataTemplate x:Name="invoiceTemplate" DataType="{x:Type viewmodels:InvoiceViewModel}">
+            <views:InvoiceListView></views:InvoiceListView>
+        </DataTemplate>
+    </Window.Resources>
 </Window>
