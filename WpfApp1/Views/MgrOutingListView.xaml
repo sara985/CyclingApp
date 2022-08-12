@@ -28,10 +28,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="btnSeeOuting" Content="More Info" HorizontalAlignment="Right" Width="200" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="0,2,20,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold" Click="btnSeeOuting_Click"/>
-            <Button Grid.Column="1" x:Name="btnAddOuting" Content="Add New Outing" HorizontalAlignment="Left" Width="200" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="20,2,0,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold"/>
+            <Button Grid.Column="1" x:Name="btnAddOuting" Content="Add New Outing" HorizontalAlignment="Left" Width="200" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="20,2,0,2" Background="#FFE7E7AE" FontSize="18" FontWeight="Bold" Click="btnAddOuting_Click"/>
         </Grid>
 
     </Grid>
 
-   
+
 </UserControl>
