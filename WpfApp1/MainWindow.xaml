@@ -40,7 +40,7 @@
         </StackPanel>
         
         <StackPanel Grid.Row="2" Margin="0,2,0,0">
-            <Button Grid.Row="2" x:Name="btnSeeMembers" Height="100" Width="250" HorizontalAlignment="Left">
+            <Button Grid.Row="2" x:Name="btnSeeMembers" Height="100" Width="250" HorizontalAlignment="Left" Click="btnSeeMembers_Click">
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -87,6 +87,10 @@
 
         <DataTemplate x:Name="MngOutingTemplate" DataType="{x:Type viewmodels:MgrOutingListViewModel}">
             <views:MgrOutingListView></views:MgrOutingListView>
+        </DataTemplate>
+
+        <DataTemplate x:Name="ListMemberTemplate" DataType="{x:Type viewmodels:MemberListViewModels}">
+            <views:MemberListView></views:MemberListView>
         </DataTemplate>
     </Window.Resources>
 

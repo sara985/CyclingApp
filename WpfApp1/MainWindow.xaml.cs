@@ -42,5 +42,10 @@ namespace WpfApp1
         {
             DataContext = new MgrOutingListViewModel();
         }
+
+        private void btnSeeMembers_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MemberListViewModels();
+        }
     }
 }

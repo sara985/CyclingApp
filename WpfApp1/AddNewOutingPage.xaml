@@ -27,16 +27,16 @@
         <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtStartingPoint" Height="40" Margin="0,0,5,0" VerticalContentAlignment="Center"/>
         
         <Label Grid.Row="2" Content="Outing Date:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14"/>
-        <DatePicker Grid.Row="2" Grid.Column="1" Name="PickerOutingDate" Width="180" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White"/>
+        <DatePicker Grid.Row="2" Grid.Column="1" Name="PickerOutingDate" Width="180" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" VerticalContentAlignment="Center"/>
 
         <Label Grid.Row="3" Content="Starting Hour:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Name="txtStartHour" Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="txtStartHour" Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
         <Label Grid.Row="4" Content="Finish Hour:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14"/>
-        <TextBox Grid.Row="4" Grid.Column="1" Name="txtFinishHour" Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Name="txtFinishHour" Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
         <Label Grid.Row="5" Content="Transport Cost:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14"/>
-        <TextBox Grid.Row="5" Grid.Column="1" Name="txtCostOuting" Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Name="txtCostOuting" Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
 
         <Grid Grid.Row="6" Grid.ColumnSpan="2">
