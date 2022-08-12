@@ -1,0 +1,78 @@
+﻿<Window x:Class="WpfApp1.TreasurerMainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="TreasurerMainPage" Height="540" Width="1200" FontSize="24" FontWeight="Bold"  Background="#FF39DD3B" Icon="/bicycle.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="/bicycle.png" />
+        <ContentControl Content="{Binding}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Height="auto" Width="auto"/>
+        <Label x:Name="lblMainTreasur" Content="Cycling Club Mons Treasurer Page" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Height="58"/>
+
+        <StackPanel Grid.Row="1" Margin="0,2,0,0">
+            <Button Grid.Row="1" x:Name="btnInvoices" Height="100" Width="250" HorizontalAlignment="Left" >
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="imgInvoices" Source="/Images/invoice.png" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0"/>
+                    <TextBlock Text="Invoices" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="12,0,0,0" FontSize="24"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,2,0,0">
+            <Button Grid.Row="2" x:Name="btnCharges" Height="100" Width="250" HorizontalAlignment="Left" >
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="chargesImage" Source="/Images/cost.png" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0"/>
+                    <TextBlock Text="List of Charges" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" FontSize="18" HorizontalAlignment="Left"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,2,0,0">
+            <Button Grid.Row="3" x:Name="btnToPay" Height="100" Width="250" HorizontalAlignment="Left" >
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="toPayImage" Source="/Images/money.png" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0"/>
+                    <TextBlock Text="Pay Transport" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" FontSize="18" HorizontalAlignment="Left"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Margin="0,2,0,0">
+            <Button Grid.Row="4" x:Name="btnLogout" Height="100" Width="250" HorizontalAlignment="Left" Click="btnLogout_Click" >
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="logoutImage" Source="/Images/shutdown1.png" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0"/>
+                    <TextBlock Text="Close the Apps" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" FontSize="18"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

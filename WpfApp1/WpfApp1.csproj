@@ -18,7 +18,10 @@
       <None Remove="adventure.png" />
       <None Remove="bicycle.png" />
       <None Remove="Images\adventure1.png" />
+      <None Remove="Images\cost.png" />
       <None Remove="Images\id1.png" />
+      <None Remove="Images\invoice.png" />
+      <None Remove="Images\money.png" />
       <None Remove="Images\shutdown1.png" />
       <None Remove="Images\team.png" />
     </ItemGroup>
@@ -45,7 +48,10 @@
       <Resource Include="adventure.png" />
       <Resource Include="bicycle.png" />
       <Resource Include="Images\adventure1.png" />
+      <Resource Include="Images\cost.png" />
       <Resource Include="Images\id1.png" />
+      <Resource Include="Images\invoice.png" />
+      <Resource Include="Images\money.png" />
       <Resource Include="Images\shutdown1.png" />
       <Resource Include="Images\team.png" />
     </ItemGroup>

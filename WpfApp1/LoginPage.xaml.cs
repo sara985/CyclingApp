@@ -36,8 +36,11 @@ namespace WpfApp1
                 this.Visibility = Visibility.Collapsed;
                 //NonAdminPage membermain = new NonAdminPage();
                 //membermain.ShowDialog();
-                MainWindow managermain = new MainWindow();
-                managermain.ShowDialog();
+                //MainWindow managermain = new MainWindow();
+                //managermain.ShowDialog();
+                TreasurerMainPage treasurerMain = new TreasurerMainPage();
+                treasurerMain.ShowDialog();
+
             }
             
         }
