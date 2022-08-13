@@ -17,6 +17,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date" Width="*" FontSize="18" FontWeight="Bold"/>
                 <DataGridTextColumn Header="Starting Hour" Width="*" FontSize="18"/>
+                <DataGridTextColumn Header="Finish Hour" Width="*" FontSize="18"/>
                 <DataGridTextColumn Header="Starting Point" Width="*" FontSize="18"/>
                 <DataGridTextColumn Header="Category" Width="*" FontSize="18"/>
             </DataGrid.Columns>

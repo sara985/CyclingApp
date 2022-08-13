@@ -42,8 +42,11 @@ namespace WpfApp1
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
                 MessageBox.Show(m.Firstname);
-                MainWindow managermain = new MainWindow();
-                managermain.ShowDialog();
+                //MainWindow managermain = new MainWindow();
+                //managermain.ShowDialog();
+                TreasurerMainPage treasurerMain = new TreasurerMainPage();
+                treasurerMain.ShowDialog();
+
             }
             
         }
