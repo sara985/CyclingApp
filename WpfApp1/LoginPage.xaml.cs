@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.DAO;
+using WpfApp1.POCO;
 using WpfApp1.ViewModels;
 using WpfApp1.Views;
 
@@ -37,6 +39,9 @@ namespace WpfApp1
                 this.Visibility = Visibility.Collapsed;
                 //NonAdminPage membermain = new NonAdminPage();
                 //membermain.ShowDialog();
+                MemberDAO mem = new MemberDAO();
+                Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
+                MessageBox.Show(m.Firstname);
                 MainWindow managermain = new MainWindow();
                 managermain.ShowDialog();
             }

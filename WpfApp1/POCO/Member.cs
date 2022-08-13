@@ -41,7 +41,8 @@ namespace WpfApp1.POCO
             this.password=password;
         }
 
-        public int Id { get => id; set => id = value; }
+        public int Id { get => id; set => id = value; 
+        }
         public string Firstname { get => firstname; set => firstname = value; }
         public string Lastname { get => lastname; set => lastname = value; }
         public int Position { get => position; set => position = value; }
@@ -50,11 +51,16 @@ namespace WpfApp1.POCO
         public string Password { get => password; set => password = value; }
         public float Balance { get => _balance; set => _balance = value; }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public override string? ToString()
         {
             return base.ToString();
+        }
+        protected void OnPropertyChanged(string info)
+        {
+            var handler = PropertyChanged;
+            handler?.Invoke(this, new PropertyChangedEventArgs(info));
         }
     }
 }
