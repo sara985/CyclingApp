@@ -45,7 +45,7 @@ namespace WpfApp1
 
         private void btnSeeMembers_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new MemberListViewModels();
+            DataContext = new MemberListViewModel();
         }
     }
 }
