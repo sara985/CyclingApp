@@ -26,11 +26,11 @@
                 <ColumnDefinition Width="150*"/>
             </Grid.ColumnDefinitions>
             <Label Content="First Name:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <TextBox Grid.Column="1" Name="txtFirstName" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <TextBox Grid.Column="1" Name="txtFirstName" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" Text="{Binding Member.Firstname}"/>
             <Label Grid.Column="2" Content="Last Name:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <TextBox Grid.Column="3" Name="txtLastName" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <TextBox Grid.Column="3" Name="txtLastName" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" Text="{Binding Member.Lastname}"/>
             <Label Grid.Column="4" Content="E-mail:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <TextBox Grid.Column="5" Name="txtMail" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <TextBox Grid.Column="5" Name="txtMail" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" Text="{Binding Member.Email}"/>
         </Grid>
 
         <Grid Grid.Row="1" Name="gridPhoneBalance">
@@ -43,9 +43,9 @@
                 <ColumnDefinition Width="150*"/>
             </Grid.ColumnDefinitions>
             <Label Content="Phone:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <TextBox Grid.Column="1" Name="txtPhone" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <TextBox Grid.Column="1" Name="txtPhone" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" Text="{Binding Member.Phone}"/>
             <Label Grid.Column="2" Content="Balance:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <TextBox Grid.Column="3" Name="txtBalance" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <TextBox Grid.Column="3" Name="txtBalance" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" Text="{Binding Member.Balance}"/>
         </Grid>
 
         <Grid Grid.Row="2" Name="gridCatBike">
@@ -56,9 +56,9 @@
                 <ColumnDefinition Width="330*"/>
             </Grid.ColumnDefinitions>
             <Label Content="Category:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <ComboBox Grid.Column="1" Name="comboCategory" Width="250" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <ComboBox Grid.Column="1" Name="comboCategory" Width="250" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" ItemsSource="{Binding Categories}"/>
             <Label Grid.Column="2" Content="Bycicle:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <ComboBox Grid.Column="3" Name="comboBike" Width="430" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <ComboBox Grid.Column="3" Name="comboBike" Width="430" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" ItemsSource="{Binding Bikes}"/>
         </Grid>
 
         <Label Grid.Row="3" Content="List of Booked Incoming Outings" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14"/>
@@ -123,6 +123,7 @@
         </DataGrid>
 
         <Button Grid.Row="5" x:Name="btnUpdateMyAccount" Content="Update" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnUpdateMyAccount_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="{Binding Bikes[0].Weight}" VerticalAlignment="Center"/>
 
 
 

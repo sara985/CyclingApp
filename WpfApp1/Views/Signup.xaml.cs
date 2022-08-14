@@ -18,12 +18,16 @@ namespace WpfApp1.Views
 
         private void btn_next_click(object sender, RoutedEventArgs e)
         {
-            MemberDAO memDAO = new MemberDAO();
-            List<Member> list = memDAO.List();
-            Member first = list[0];
-            //Console.WriteLine(memDAO.List());
-            MessageBox.Show(first.Firstname);
-            //NavigationService.Navigate(new SignupAddVehicle());       
+            var vm = (ViewModels.MemberViewModel)this.DataContext;
+            if(cb_cylco.IsChecked == true)
+            {
+                vm.Categories.Add(new Category(1, "cyclo"));
+            }
+
+            SignupAddVehicle signupAddVehicleFrame = new SignupAddVehicle();
+            //signupAddVehicleFrame.DataContext = this.DataContext;
+            //NavigationService.Navigate(signupAddVehicleFrame);
+            NavigationService.Navigate(signupAddVehicleFrame);       
         }
     }
 }

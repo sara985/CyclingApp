@@ -31,6 +31,8 @@ namespace WpfApp1.Views
         private void btnSeeMember_Click(object sender, RoutedEventArgs e)
         {
             DetailMemberMgrPage page = new DetailMemberMgrPage();
+            MemberListViewModel memberListViewModel = (MemberListViewModel)this.DataContext;
+            page.DataContext= (MemberListViewModel)memberListViewModel;
             page.ShowDialog();
         }
     }

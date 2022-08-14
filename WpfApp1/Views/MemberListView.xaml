@@ -12,7 +12,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="gridOuting" AutoGenerateColumns="False" SelectionUnit="FullRow" ItemsSource="{Binding Members}">
+        <DataGrid x:Name="gridMembers" AutoGenerateColumns="False" SelectionUnit="FullRow" ItemsSource="{Binding Members}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Width="*" FontSize="18" FontWeight="Bold" Binding="{Binding Firstname}"/>
                 <DataGridTextColumn Header="Last Name" Width="*" FontSize="18" Binding="{Binding Lastname}"/>

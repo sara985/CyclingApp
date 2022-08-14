@@ -44,9 +44,22 @@ namespace WpfApp1.POCO
         public int Id { get => id; set => id = value; 
         }
         public string Firstname { get => firstname; set => firstname = value; }
-        public string Lastname { get => lastname; set => lastname = value; }
+        public string Lastname
+        {
+            get { return lastname; }
+            set { 
+                lastname = value;
+                OnPropertyChanged("Lastname");
+            }
+        }
         public int Position { get => position; set => position = value; }
-        public string Email { get => email; set => email = value; }
+        public string Email {
+            get { return email; }                   
+            set { 
+                    email = value;
+                     OnPropertyChanged("Email");
+            }
+        }
         public string Phone { get => phone; set => phone = value; }
         public string Password { get => password; set => password = value; }
         public float Balance { get => _balance; set => _balance = value; }

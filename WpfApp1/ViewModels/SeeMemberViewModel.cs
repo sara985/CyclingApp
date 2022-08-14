@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WpfApp1.ViewModels
 {
-    internal class MemberSignup1VM
+    class SeeMemberViewModel
     {
+        
     }
 }

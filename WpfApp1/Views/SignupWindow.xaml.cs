@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1.Views
 {
@@ -22,7 +23,9 @@ namespace WpfApp1.Views
         public SignupWindow()
         {
             InitializeComponent();
-            signupFrame.Content = new Signup();
+            Signup signupFrame=new Signup();
+            signupFrame.DataContext = new MemberViewModel();
+            this.Content = signupFrame;
         }
     }
 }

@@ -35,13 +35,16 @@ namespace WpfApp1
                 MessageBox.Show("Please fill in your email and password");
             }
             else
-            {
-                
-                
+            {             
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
+                List<Category> categories = new List<Category>();
+                MemberViewModel vm = new MemberViewModel();
+                vm.Member = m;
+                vm.Categories = mem.GetCategoriesByMemberId(m.Id);
+                vm.Bikes = mem.getBikesByMemberId(m.Id);
 
-                if(m != null)
+                if (m != null)
                 {
                     this.Visibility = Visibility.Collapsed;
                     if (m.Position == 1)
@@ -56,6 +59,7 @@ namespace WpfApp1
                     }
                     else {
                         NonAdminPage membermain = new NonAdminPage();
+                        membermain.DataContext = vm;
                         membermain.ShowDialog();
                     }
                 }
@@ -71,6 +75,7 @@ namespace WpfApp1
         {
             this.Visibility = Visibility.Collapsed;
             SignupWindow signup = new SignupWindow();
+            signup.DataContext = new MemberViewModel();
             signup.ShowDialog();
         }
     }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WpfApp1.DAO;
 using WpfApp1.POCO;
 
 namespace WpfApp1.ViewModels
@@ -14,12 +15,8 @@ namespace WpfApp1.ViewModels
 
         public MemberListViewModel()
         {
-            _memberList = new List<Member>
-            {
-                new Member(1,"sar","coq",1, "email","phone","pass",0),
-                new Member(1,"lia","coq",1, "email","phone","pass",0),
-                new Member(1,"sarah","coq",1, "email","phone","pass",0)
-            };
+            MemberDAO memberDAO = new MemberDAO();
+            _memberList = memberDAO.List();
         }
 
         public IList<Member> Members

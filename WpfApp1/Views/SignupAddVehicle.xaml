@@ -40,8 +40,8 @@
             </Grid.RowDefinitions>
             <TextBlock Text="How many people can you take in your car ? (you excluded)"/>
             <TextBlock Grid.Row="0" Grid.Column="1" Text="How many bikes can you take ? (other than yours)"/>
-            <TextBox x:Name="txtbox_email" Grid.Row="1" Grid.Column="0"/>
-            <TextBox x:Name="txtbox_password" Grid.Row="1" Grid.Column="1"/>
+            <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding Member.Email}"/>
+            <TextBox Grid.Row="1" Grid.Column="1"/>
         </Grid>
         <Button x:Name="btn_gotobike" Grid.Row="4" Click="btn_goToBikeClick">Next</Button>
     </Grid>
