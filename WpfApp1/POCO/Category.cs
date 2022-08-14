@@ -16,5 +16,10 @@ namespace WpfApp1.POCO
             this.id = id;
             this.name = name;
         }
+
+        public override string? ToString()
+        {
+            return id + ". " + name;
+        }
     }
 }

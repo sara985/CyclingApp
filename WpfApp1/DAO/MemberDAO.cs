@@ -19,10 +19,36 @@ namespace WpfApp1.DAO
         {
             throw new NotImplementedException();
         }
-
         public Member GetById(int id)
         {
             throw new NotImplementedException();
+        }
+        public List<Category> GetCategoriesByMemberId(int id)
+        {
+            try
+            {
+                List<Category> list = new List<Category>();
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
+                {
+                    SqlCommand cmd = new SqlCommand("Select * from dbo.enrollment en join dbo.category cat on cat.id = en.categoryid where en.memberid = @Id ", connection);
+                    cmd.Parameters.AddWithValue("Id", id);
+                    connection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Category c = new Category(reader.GetInt32(1), reader.GetString(9));
+                            list.Add(c);
+                        }
+                    }
+                }
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
 
         public List<Member> List()
@@ -91,6 +117,11 @@ namespace WpfApp1.DAO
                 }
             }
             return null;
+        }
+
+        public List<Bike> getBikesByMemberId(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

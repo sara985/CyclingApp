@@ -38,10 +38,13 @@ namespace WpfApp1
             {             
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
+                List<Category> categories = new List<Category>();
                 MemberViewModel vm = new MemberViewModel();
                 vm.Member = m;
+                vm.Categories = mem.GetCategoriesByMemberId(m.Id);
+                //vm.Bikes 
 
-                if(m != null)
+                if (m != null)
                 {
                     this.Visibility = Visibility.Collapsed;
                     if (m.Position == 1)
