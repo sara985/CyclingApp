@@ -89,7 +89,7 @@
             <views:MgrOutingListView></views:MgrOutingListView>
         </DataTemplate>
 
-        <DataTemplate x:Name="ListMemberTemplate" DataType="{x:Type viewmodels:MemberListViewModels}">
+        <DataTemplate x:Name="ListMemberTemplate" DataType="{x:Type viewmodels:MemberListViewModel}">
             <views:MemberListView></views:MemberListView>
         </DataTemplate>
     </Window.Resources>
