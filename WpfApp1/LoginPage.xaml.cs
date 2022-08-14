@@ -37,15 +37,31 @@ namespace WpfApp1
             else
             {
                 this.Visibility = Visibility.Collapsed;
-                //NonAdminPage membermain = new NonAdminPage();
-                //membermain.ShowDialog();
+                
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
-                //MessageBox.Show(m.Firstname);
-                //MainWindow managermain = new MainWindow();
-                //managermain.ShowDialog();
-                TreasurerMainPage treasurerMain = new TreasurerMainPage();
-                treasurerMain.ShowDialog();
+
+                if(m != null)
+                {
+                    if (m.Position == 1)
+                    {
+                        TreasurerMainPage treasurerMain = new TreasurerMainPage();
+                        treasurerMain.ShowDialog();
+                    }
+                    else if (m.Position == 2)
+                    {
+                        MainWindow managermain = new MainWindow();
+                        managermain.ShowDialog();
+                    }
+                    else {
+                        NonAdminPage membermain = new NonAdminPage();
+                        membermain.ShowDialog();
+                    }
+                    
+                }
+
+
+
 
             }
             
