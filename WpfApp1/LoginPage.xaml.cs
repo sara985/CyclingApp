@@ -36,13 +36,14 @@ namespace WpfApp1
             }
             else
             {
-                this.Visibility = Visibility.Collapsed;
+                
                 
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
 
                 if(m != null)
                 {
+                    this.Visibility = Visibility.Collapsed;
                     if (m.Position == 1)
                     {
                         TreasurerMainPage treasurerMain = new TreasurerMainPage();
