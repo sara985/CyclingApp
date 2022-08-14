@@ -31,8 +31,8 @@
             </Grid.RowDefinitions>
             <TextBlock Text="First Name"/>
             <TextBlock Grid.Row="0" Grid.Column="1" Text="Last Name"/>
-            <TextBox x:Name="txtbox_firstname" Grid.Row="1" Grid.Column="0"/>
-            <TextBox x:Name="txtbox_lastname" Grid.Row="1" Grid.Column="1" Text="{Binding Member.lastname}"/>
+            <TextBox x:Name="txtbox_firstname" Grid.Row="1" Grid.Column="0" Text="{Binding Member.Firstname}" />
+            <TextBox x:Name="txtbox_lastname" Grid.Row="1" Grid.Column="1" Text="{Binding Member.Lastname}"/>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -45,8 +45,8 @@
             </Grid.RowDefinitions>
             <TextBlock Text="Email"/>
             <TextBlock Grid.Row="0" Grid.Column="1" Text="Password"/>
-            <TextBox x:Name="txtbox_email" Grid.Row="1" Grid.Column="0"/>
-            <TextBox x:Name="txtbox_password" Grid.Row="1" Grid.Column="1"/>
+            <TextBox x:Name="txtbox_email" Grid.Row="1" Grid.Column="0" Text="{Binding Member.Email}"/>
+            <TextBox x:Name="txtbox_password" Grid.Row="1" Grid.Column="1" Text="{Binding Member.Password}"/>
         </Grid>
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
@@ -78,7 +78,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Phone number"/>
-            <TextBox x:Name="txtbox_phone_no" Grid.Row="1"/>
+            <TextBox x:Name="txtbox_phone_no" Grid.Row="1" Text="{Binding Member.Phone}"/>
             <Label FontWeight="Bold" Grid.Column="1">Do you own a car ?</Label>
             <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
                 <RadioButton Grid.Row="1" Grid.Column="1">Yes</RadioButton>

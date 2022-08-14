@@ -70,6 +70,7 @@ namespace WpfApp1
         {
             this.Visibility = Visibility.Collapsed;
             SignupWindow signup = new SignupWindow();
+            signup.DataContext = new MemberSignupViewModel();
             signup.ShowDialog();
         }
     }
