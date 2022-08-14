@@ -104,14 +104,15 @@ namespace WpfApp1.DAO
                     while (reader.Read())
                     {
                         Member m = new Member();
-                        m.Id = reader.GetInt32(0);
+                        m.Id = reader.GetInt32("id");
                         m.Firstname = reader.GetString("firstname");
-                        m.Lastname = reader.GetString(2);
-                        m.Email = reader.GetString(3);
-                        m.Phone = reader.GetString(4);
-                        m.Password = reader.GetString(5);
-                        m.Position = reader.GetInt32(6);
-                        m.Balance = 0;
+                        m.Lastname = reader.GetString("lastname");
+                        m.Email = reader.GetString("mail");
+                        m.Phone = reader.GetString("phone");
+                        m.Password = reader.GetString("password");
+                        m.Position = reader.GetInt32("position");
+                        decimal bal = reader.GetDecimal(7);
+                        m.Balance = bal;
                         return m;
                     }
                 }
@@ -142,5 +143,7 @@ namespace WpfApp1.DAO
             }
             return bikes;
         }
+
+
     }
 }

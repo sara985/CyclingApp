@@ -17,13 +17,13 @@ namespace WpfApp1.POCO
         private string email;
         private string phone;
         private string password;
-        private float _balance;
+        private decimal _balance;
 
         public Member()
         {
         }
 
-        public Member(int id, string firstname, string lastname, int position, string email, string phone, string password, float balance)
+        public Member(int id, string firstname, string lastname, int position, string email, string phone, string password, decimal balance)
         {
             this.id = id;
             this.firstname = firstname;
@@ -62,7 +62,7 @@ namespace WpfApp1.POCO
         }
         public string Phone { get => phone; set => phone = value; }
         public string Password { get => password; set => password = value; }
-        public float Balance { get => _balance; set => _balance = value; }
+        public decimal Balance { get => _balance; set => _balance = value; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
