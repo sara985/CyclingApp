@@ -42,7 +42,7 @@ namespace WpfApp1
                 MemberViewModel vm = new MemberViewModel();
                 vm.Member = m;
                 vm.Categories = mem.GetCategoriesByMemberId(m.Id);
-                //vm.Bikes 
+                vm.Bikes = mem.getBikesByMemberId(m.Id);
 
                 if (m != null)
                 {

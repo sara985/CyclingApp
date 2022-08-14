@@ -56,9 +56,9 @@
                 <ColumnDefinition Width="330*"/>
             </Grid.ColumnDefinitions>
             <Label Content="Category:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <ComboBox Grid.Column="1" Name="comboCategory" Width="250" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <ComboBox Grid.Column="1" Name="comboCategory" Width="250" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" ItemsSource="{Binding Categories}"/>
             <Label Grid.Column="2" Content="Bycicle:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"/>
-            <ComboBox Grid.Column="3" Name="comboBike" Width="430" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True"/>
+            <ComboBox Grid.Column="3" Name="comboBike" Width="430" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" IsReadOnly="True" ItemsSource="{Binding Bikes}"/>
         </Grid>
 
         <Label Grid.Row="3" Content="List of Booked Incoming Outings" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14"/>
@@ -123,7 +123,7 @@
         </DataGrid>
 
         <Button Grid.Row="5" x:Name="btnUpdateMyAccount" Content="Update" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnUpdateMyAccount_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="44,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="{Binding Member.Email}" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="{Binding Bikes[0].Weight}" VerticalAlignment="Center"/>
 
 
 

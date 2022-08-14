@@ -10,7 +10,7 @@ namespace WpfApp1.ViewModels
     class MemberViewModel
     {
         private Member _member;
-        private Vehicle? car;
+        private Vehicle? _vehicle;
         private IList<Category> _categories;
         private IList<Bike> _bikes;
 
@@ -26,7 +26,7 @@ namespace WpfApp1.ViewModels
             set { _member = value; } 
         }
 
-        public Vehicle? Car { get => car; set => car = value; }
+        public Vehicle? Vehicle { get => _vehicle; set => _vehicle = value; }
         public IList<Category> Categories { get => _categories; set => _categories = value; }
         public IList<Bike> Bikes { get => _bikes; set => _bikes = value; }
     }

@@ -121,7 +121,26 @@ namespace WpfApp1.DAO
 
         public List<Bike> getBikesByMemberId(int id)
         {
-            throw new NotImplementedException();
+            List<Bike> bikes = new List<Bike>();
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
+            {                
+                SqlCommand cmd = new SqlCommand("Select * from dbo.bike where ownerid = @id", connection);
+                cmd.Parameters.AddWithValue("id", id);
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Bike b = new Bike();
+                        b.Id = reader.GetInt32("id");
+                        b.Length = reader.GetInt32("length");
+                        b.Weight = reader.GetInt32("weight");
+                        b.Type = reader.GetString("type");
+                        bikes.Add(b);
+                    }
+                }
+            }
+            return bikes;
         }
     }
 }
