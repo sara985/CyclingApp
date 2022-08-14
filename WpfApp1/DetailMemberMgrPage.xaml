@@ -29,7 +29,7 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock  x:Name="txtFirstName" Text="First Name" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+            <TextBlock  x:Name="txtFirstName" Text="{Binding Members.Firstname}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"/>
             <TextBlock  Grid.Column="1" x:Name="txtLastName" Text="LastName" VerticalAlignment="Center" HorizontalAlignment="Left"/>
         </Grid>
         
