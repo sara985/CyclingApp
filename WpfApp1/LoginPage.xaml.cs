@@ -57,12 +57,11 @@ namespace WpfApp1
                         NonAdminPage membermain = new NonAdminPage();
                         membermain.ShowDialog();
                     }
-                    
                 }
-
-
-
-
+                else
+                {
+                    MessageBox.Show("Your username or password is incorrect or you are not signed up.");
+                }
             }
             
         }
