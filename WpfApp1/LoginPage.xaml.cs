@@ -35,11 +35,11 @@ namespace WpfApp1
                 MessageBox.Show("Please fill in your email and password");
             }
             else
-            {
-                
-                
+            {             
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
+                MemberViewModel vm = new MemberViewModel();
+                vm.Member = m;
 
                 if(m != null)
                 {
@@ -56,6 +56,7 @@ namespace WpfApp1
                     }
                     else {
                         NonAdminPage membermain = new NonAdminPage();
+                        membermain.DataContext = vm;
                         membermain.ShowDialog();
                     }
                 }
@@ -71,7 +72,7 @@ namespace WpfApp1
         {
             this.Visibility = Visibility.Collapsed;
             SignupWindow signup = new SignupWindow();
-            signup.DataContext = new MemberSignupViewModel();
+            signup.DataContext = new MemberViewModel();
             signup.ShowDialog();
         }
     }

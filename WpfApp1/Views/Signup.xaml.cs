@@ -18,7 +18,7 @@ namespace WpfApp1.Views
 
         private void btn_next_click(object sender, RoutedEventArgs e)
         {
-            var vm = (ViewModels.MemberSignupViewModel)this.DataContext;
+            var vm = (ViewModels.MemberViewModel)this.DataContext;
             if(cb_cylco.IsChecked == true)
             {
                 vm.Categories.Add(new Category(1, "cyclo"));

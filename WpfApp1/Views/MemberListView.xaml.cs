@@ -32,7 +32,7 @@ namespace WpfApp1.Views
         {
             DetailMemberMgrPage page = new DetailMemberMgrPage();
             MemberListViewModel memberListViewModel = (MemberListViewModel)this.DataContext;
-            page.DataContext= memberListViewModel;
+            page.DataContext= (MemberListViewModel)memberListViewModel;
             page.ShowDialog();
         }
     }

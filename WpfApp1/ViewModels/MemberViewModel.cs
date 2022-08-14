@@ -7,14 +7,14 @@ using WpfApp1.POCO;
 
 namespace WpfApp1.ViewModels
 {
-    class MemberSignupViewModel
+    class MemberViewModel
     {
         private Member _member;
         private Vehicle? car;
         private IList<Category> _categories;
         private IList<Bike> _bikes;
 
-        public MemberSignupViewModel()
+        public MemberViewModel()
         {
             _member = new Member();
             _member.Email = "car";

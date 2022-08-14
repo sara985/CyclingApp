@@ -33,8 +33,9 @@ namespace WpfApp1
 
         private void btnMyAccount_Click(object sender, RoutedEventArgs e)
         {
+
             lblMainMember.Content = "My Account";
-            DataContext = new MyAccountViewModel();
+            
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)

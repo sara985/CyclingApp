@@ -71,7 +71,7 @@
             </views:OutingList>
         </DataTemplate>
 
-        <DataTemplate x:Name="myAccountTemplate" DataType="{x:Type viewmodels:MyAccountViewModel}">
+        <DataTemplate x:Name="myAccountTemplate" DataType="{x:Type viewmodels:MemberViewModel}">
             <views:MyAccountView></views:MyAccountView>
         </DataTemplate>
     </Window.Resources>

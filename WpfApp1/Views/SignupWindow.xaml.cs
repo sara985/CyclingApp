@@ -24,7 +24,7 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
             Signup signupFrame=new Signup();
-            signupFrame.DataContext = new MemberSignupViewModel();
+            signupFrame.DataContext = new MemberViewModel();
             this.Content = signupFrame;
         }
     }
