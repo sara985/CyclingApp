@@ -37,6 +37,7 @@ namespace WpfApp1
             else
             {
                 
+                
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
 
