@@ -20,7 +20,26 @@ namespace WpfApp1.DAO
 
         public Outing GetById(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
+            {
+                SqlCommand cmd = new SqlCommand("Select * from dbo.outing where id = @id", connection);
+                cmd.Parameters.AddWithValue("id", id);
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Outing o = new Outing();
+                        o.Id = reader.GetInt32("id");
+                        o.Outingdate = reader.GetDateTime("outingdate");
+                        o.Startingpoint = reader.GetString("startingpoint");
+                        decimal c = reader.GetDecimal(7);
+                        o.Cost = c;
+                        return o;             
+                    }
+                }
+            }
+            return null;
         }
 
         public void Insert(Outing t)
