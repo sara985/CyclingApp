@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfApp1.ViewModels;
+using WpfApp1.DAO;
+using WpfApp1.POCO;
+using WpfApp1.Views;
 
 namespace WpfApp1
 {
@@ -27,9 +30,19 @@ namespace WpfApp1
 
         private void btnMemberOuting_Click(object sender, RoutedEventArgs e)
         {
+            
             lblMainMember.Content = "list of incoming outings";
-            DataContext = new MemberOutingViewModel();
+            //DataContext = new MemberOutingViewModel();
+            //MemberDAO mem = new MemberDAO();
+            //    Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
+            //    List<Category> categories = new List<Category>();
+            //    MemberViewModel vm = new MemberViewModel();
+
+            //OutingDao outingDao = new MemberOutingViewModel();
+            MessageBox.Show("TEST!!!!");
+            
         }
+
 
         private void btnMyAccount_Click(object sender, RoutedEventArgs e)
         {

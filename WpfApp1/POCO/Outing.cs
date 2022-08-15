@@ -11,17 +11,19 @@ namespace WpfApp1.POCO
     {
         private int id;
         private DateTime outingdate;
+        private String startingpoint;
         private double cost;
         private int category;
 
         public Outing() { }
 
-        public Outing(int id, DateTime outingdate, double cost, int category)
+        public Outing(int id, String startingpoint,DateTime outingdate, double cost, int category)
         {
             this.id = id;
             this.outingdate = outingdate;
             this.cost = cost;
             this.category = category;
+            this.startingpoint = startingpoint;
         }
 
         public int Id { get => id; set => id = value; }
@@ -31,6 +33,8 @@ namespace WpfApp1.POCO
         public double Cost { get => cost; set => cost = value; }   
 
         public int Category { get => category; set => category = value; }
+
+        public string Startingpoint { get => startingpoint; set => startingpoint = value; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
