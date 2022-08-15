@@ -35,7 +35,8 @@ namespace WpfApp1
                 MessageBox.Show("Please fill in your email and password");
             }
             else
-            {             
+            {    
+                OutingDao outDAO = new OutingDao();
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
                 List<Category> categories = new List<Category>();
@@ -43,6 +44,7 @@ namespace WpfApp1
                 vm.Member = m;
                 vm.Categories = mem.GetCategoriesByMemberId(m.Id);
                 vm.Bikes = mem.getBikesByMemberId(m.Id);
+                vm.Outing = outDAO.List();
 
                 if (m != null)
                 {
@@ -60,6 +62,7 @@ namespace WpfApp1
                     else {
                         NonAdminPage membermain = new NonAdminPage();
                         membermain.DataContext = vm;
+                        //MessageBox.Show(vm.Outing.First().Startingpoint);
                         membermain.ShowDialog();
                     }
                 }
@@ -67,8 +70,7 @@ namespace WpfApp1
                 {
                     MessageBox.Show("Your username or password is incorrect or you are not signed up.");
                 }
-            }
-            
+            }            
         }
 
         private void btnSignupClick(object sender, RoutedEventArgs e)

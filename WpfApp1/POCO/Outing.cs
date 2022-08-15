@@ -12,12 +12,12 @@ namespace WpfApp1.POCO
         private int id;
         private DateTime outingdate;
         private String startingpoint;
-        private double cost;
+        private decimal cost;
         private int category;
 
         public Outing() { }
 
-        public Outing(int id, String startingpoint,DateTime outingdate, double cost, int category)
+        public Outing(int id, String startingpoint,DateTime outingdate, decimal cost, int category)
         {
             this.id = id;
             this.outingdate = outingdate;
@@ -30,7 +30,7 @@ namespace WpfApp1.POCO
 
         public DateTime Outingdate { get => outingdate; set => outingdate = value; }
 
-        public double Cost { get => cost; set => cost = value; }   
+        public decimal Cost { get => cost; set => cost = value; }   
 
         public int Category { get => category; set => category = value; }
 

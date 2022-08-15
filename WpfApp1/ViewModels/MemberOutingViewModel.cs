@@ -43,10 +43,22 @@ namespace WpfApp1.ViewModels
                 oUpdater = value;
             }
         }
-
         private class Updater : ICommand
         {
-            ICommand Outings
+            #region ICommand Members  
+
+            public bool CanExecute(object parameter)
+            {
+                return true;
+            }
+
+            public event EventHandler CanExecuteChanged;
+
+            public void Execute(object parameter)
+            {
+
+            }
+            #endregion  
         }
 
     }

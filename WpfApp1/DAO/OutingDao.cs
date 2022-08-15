@@ -43,9 +43,9 @@ namespace WpfApp1.DAO
                         {
                             Outing o = new Outing();
                             o.Id = reader.GetInt32(0);
-                            o.Outingdate = reader.GetDateTime(1);
-                            o.Startingpoint = reader.GetString(2);
-                            o.Cost = reader.GetDouble(3);
+                            o.Outingdate = reader.GetDateTime(2);
+                            o.Startingpoint = reader.GetString(1);
+                            o.Cost = reader.GetDecimal(3);
                             o.Category = reader.GetInt32(4);
                             list.Add(o);                           
                         }
