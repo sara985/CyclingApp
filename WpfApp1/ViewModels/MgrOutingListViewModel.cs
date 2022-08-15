@@ -9,7 +9,7 @@ using WpfApp1.POCO;
 
 namespace WpfApp1.ViewModels
 {
-    public class MgrOutingListViewModel
+    class MgrOutingListViewModel
     {
        private IList<Outing> _outingList;
 
@@ -19,7 +19,7 @@ namespace WpfApp1.ViewModels
             _outingList = outingDao.List();
         }
 
-        private IList<Outing> Outings
+        public IList<Outing> Outings
         {
             get { return _outingList; }
             set { _outingList = value; }
