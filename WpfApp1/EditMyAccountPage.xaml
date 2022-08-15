@@ -31,7 +31,7 @@
         <Label Content="Update My Account" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3"/>
 
         <Label Grid.Row="1" Content="First Name:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtFirstName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtFirstName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40" Text="{Binding Firstname}"/>
         <Label Grid.Row="2" Content="Last Name:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
         <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtLastName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40"/>
         <Label Grid.Row="3" Content="E-mail:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
