@@ -7,8 +7,6 @@ using System.Windows.Input;
 using WpfApp1.DAO;
 using WpfApp1.POCO;
 
-
-
 namespace WpfApp1.ViewModels
 {
     class MemberOutingViewModel
@@ -21,7 +19,6 @@ namespace WpfApp1.ViewModels
             _outingList = outingDao.List();
         }
 
-
         public IList<Outing> Outings
         {
             get { return _outingList; }
@@ -29,7 +26,6 @@ namespace WpfApp1.ViewModels
         }
 
         private ICommand oUpdater;
-
         public ICommand UpdateCommand
         {
             get
@@ -43,6 +39,7 @@ namespace WpfApp1.ViewModels
                 oUpdater = value;
             }
         }
+
         private class Updater : ICommand
         {
             #region ICommand Members  

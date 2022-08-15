@@ -11,7 +11,7 @@ using WpfApp1.ViewModels;
 
 namespace WpfApp1.DAO
 {
-    internal class OutingDao : Interfaces.InterfaceDAO<Outing>
+    class OutingDao : Interfaces.InterfaceDAO<Outing>
     {
         public void Delete(Outing t)
         {

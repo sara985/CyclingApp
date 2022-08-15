@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp1.POCO
 {
-    internal class Outing
+    class Outing : INotifyPropertyChanged
     {
         private int id;
         private DateTime outingdate;
@@ -27,17 +27,13 @@ namespace WpfApp1.POCO
         }
 
         public int Id { get => id; set => id = value; }
-
         public DateTime Outingdate { get => outingdate; set => outingdate = value; }
-
         public decimal Cost { get => cost; set => cost = value; }   
-
         public int Category { get => category; set => category = value; }
-
         public string Startingpoint { get => startingpoint; set => startingpoint = value; }
-
+        
         public event PropertyChangedEventHandler PropertyChanged;
-
+        
         public override string? ToString()
         {
             return base.ToString();
@@ -47,6 +43,5 @@ namespace WpfApp1.POCO
             var handler = PropertyChanged;
             handler?.Invoke(this, new PropertyChangedEventArgs(info));
         }
-
     }
 }
