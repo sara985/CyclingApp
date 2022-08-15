@@ -23,10 +23,14 @@ namespace WpfApp1
     /// </summary>
     public partial class NonAdminPage : Window
     {
+
         public NonAdminPage()
         {
+
             InitializeComponent();
+            //this.memberVM = (MemberViewModel)this.DataContext;
         }
+
 
         private void btnMemberOuting_Click(object sender, RoutedEventArgs e)
         {
@@ -40,7 +44,7 @@ namespace WpfApp1
 
             //OutingDao outingDao = new MemberOutingViewModel();
             this.DataContext = new MemberOutingViewModel();
-            MessageBox.Show("TEST!!!!");
+            //MessageBox.Show(memberVM.Member.Firstname); //nullreferenceexception
             
         }
 
@@ -48,7 +52,7 @@ namespace WpfApp1
         private void btnMyAccount_Click(object sender, RoutedEventArgs e)
         {
             lblMainMember.Content = "My Account";
-            this.DataContext= new MyAccountViewModel();
+            this.DataContext = new MemberViewModel();
 
         }
 
