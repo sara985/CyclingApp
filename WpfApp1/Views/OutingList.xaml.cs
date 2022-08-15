@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.POCO;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1.Views
 {
@@ -28,6 +30,7 @@ namespace WpfApp1.Views
         private void btnSeeOuting_Click(object sender, RoutedEventArgs e)
         {
             OutingDetailMemberPage page = new OutingDetailMemberPage();
+            page.DataContext = new OutingDetailViewModel((Outing)gridOuting.SelectedItem);
             page.ShowDialog();
         }
     }

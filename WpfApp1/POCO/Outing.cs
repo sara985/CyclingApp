@@ -38,7 +38,7 @@ namespace WpfApp1.POCO
         
         public override string? ToString()
         {
-            return base.ToString();
+            return id + ". Date : " + outingdate + " cost : " + cost + " category : " + category + " starting point : " + startingpoint;
         }
         protected void OnPropertyChanged(string info)
         {

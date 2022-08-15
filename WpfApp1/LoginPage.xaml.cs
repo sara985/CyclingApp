@@ -39,12 +39,10 @@ namespace WpfApp1
                 //OutingDao outDAO = new OutingDao();
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
-                //List<Category> categories = new List<Category>();
                 MemberViewModel vm = new MemberViewModel(m.Id);
-                //vm.Member = m;
-                //vm.Categories = mem.GetCategoriesByMemberId(m.Id);
-                //vm.Bikes = mem.getBikesByMemberId(m.Id);
-                //vm.Outing = outDAO.List();
+                //int i = outDAO.getRequestBikesPlacesByOutingId(1);
+                //MessageBox.Show(i+" ");
+
 
                 if (m != null)
                 {

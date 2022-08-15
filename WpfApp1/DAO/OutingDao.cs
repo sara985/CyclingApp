@@ -56,7 +56,7 @@ namespace WpfApp1.DAO
                 {
                     SqlCommand cmd = new SqlCommand("Select * from dbo.outing", connection);
                     connection.Open();
-                    using(SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
@@ -67,7 +67,7 @@ namespace WpfApp1.DAO
                             o.Startingpoint = reader.GetString(1);
                             o.Cost = reader.GetDecimal(3);
                             o.Category = reader.GetInt32(4);
-                            list.Add(o);                           
+                            list.Add(o);
                         }
                     }
                 }
@@ -91,5 +91,34 @@ namespace WpfApp1.DAO
         //{
         //    throw new NotImplementedException();
         //}
+
+        public int getRequestPassengerPlacesByOutingId(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
+            {
+                SqlCommand cmd = new SqlCommand("select count(*) as number from outingregistration where outingid=@outingid and ispassenger = 1", connection);
+                cmd.Parameters.AddWithValue("outingid", id);
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    reader.Read();
+                    return reader.GetInt32("number");
+                }
+            }
+        }
+        public int getRequestBikesPlacesByOutingId(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
+            {
+                SqlCommand cmd = new SqlCommand("select count(*) as number from outingregistration where outingid=@outingid and hasBike = 1", connection);
+                cmd.Parameters.AddWithValue("outingid", id);
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    reader.Read();
+                    return reader.GetInt32("number");
+                }
+            }
+        }
     }
 }
