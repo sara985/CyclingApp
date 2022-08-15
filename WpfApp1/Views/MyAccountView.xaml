@@ -63,9 +63,9 @@
 
         <Label Grid.Row="3" Content="List of Booked Incoming Outings" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14"/>
 
-        <DataGrid Grid.Row="4" x:Name="datagridOutingsBooked" AutoGenerateColumns="False" SelectionUnit="FullRow" Margin="5,0,5,0">
+        <DataGrid Grid.Row="4" x:Name="datagridOutingsBooked" AutoGenerateColumns="False" SelectionUnit="FullRow" Margin="5,0,5,0" ItemsSource="{Binding Outing}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Date" Width="10*" FontSize="12">
+                <DataGridTextColumn Header="Date" Width="10*" FontSize="12" Binding="{Binding Outingdate}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="FontSize" Value="12"/>
@@ -82,7 +82,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="Finishing Hour" Width="10*" FontSize="12">
+                <DataGridTextColumn Header="Cost" Width="10*" FontSize="12" Binding="{Binding Cost}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="FontSize" Value="12"/>
@@ -91,7 +91,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="Starting Point" Width="15*" FontSize="12">
+                <DataGridTextColumn Header="Starting Point" Width="15*" FontSize="12" Binding="{Binding Startingpoint}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="FontSize" Value="12"/>
@@ -100,7 +100,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="Category" Width="15*" FontSize="12">
+                <DataGridTextColumn Header="Category" Width="15*" FontSize="12" Binding="{Binding Category}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="FontSize" Value="12"/>
