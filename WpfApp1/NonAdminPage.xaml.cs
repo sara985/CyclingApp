@@ -36,15 +36,16 @@ namespace WpfApp1
         {
             
             lblMainMember.Content = "list of incoming outings";
-            //DataContext = new MemberOutingViewModel();
-            //MemberDAO mem = new MemberDAO();
-            //    Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
-            //    List<Category> categories = new List<Category>();
-            //    MemberViewModel vm = new MemberViewModel();
+            DataContext = new MemberOutingViewModel();
+        
+           
+            
+           
 
-            //OutingDao outingDao = new MemberOutingViewModel();
-            this.DataContext = new MemberOutingViewModel();
-            //MessageBox.Show(memberVM.Member.Firstname); //nullreferenceexception
+
+
+            
+            
             
         }
 
