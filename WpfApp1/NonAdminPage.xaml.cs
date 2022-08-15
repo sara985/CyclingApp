@@ -37,15 +37,6 @@ namespace WpfApp1
             
             lblMainMember.Content = "list of incoming outings";
             DataContext = new MemberOutingViewModel();
-        
-           
-            
-           
-
-
-
-            
-            
             
         }
 

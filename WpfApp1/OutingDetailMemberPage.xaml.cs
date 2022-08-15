@@ -17,6 +17,8 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for OutingDetailMemberPage.xaml
     /// </summary>
+    /// 
+    
     public partial class OutingDetailMemberPage : Window
     {
         public OutingDetailMemberPage()
@@ -24,10 +26,14 @@ namespace WpfApp1
             InitializeComponent();
         }
 
+        
+
         private void btnCloseOuting_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+
 
         private void btnBookOuting_Click(object sender, RoutedEventArgs e)
         {

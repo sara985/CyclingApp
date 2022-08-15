@@ -13,13 +13,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="gridOuting" AutoGenerateColumns="False" SelectionUnit="FullRow">
+        <DataGrid x:Name="gridOuting" AutoGenerateColumns="False" SelectionUnit="FullRow" ItemsSource="{Binding Outings}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Date" Width="*" FontSize="18" FontWeight="Bold"/>
-                <DataGridTextColumn Header="Starting Hour" Width="*" FontSize="18"/>
-                <DataGridTextColumn Header="Finish Hour" Width="*" FontSize="18"/>
-                <DataGridTextColumn Header="Starting Point" Width="*" FontSize="18"/>
-                <DataGridTextColumn Header="Category" Width="*" FontSize="18"/>
+                <DataGridTextColumn Header="Date" Width="*" FontSize="18" FontWeight="Bold" Binding="{Binding Outingdate}"/>
+                <DataGridTextColumn Header="Starting Point" Width="*" FontSize="18"  Binding="{Binding Startingpoint}"/>
+                <DataGridTextColumn Header="Category" Width="*" FontSize="18" Binding="{Binding Category}"/>
             </DataGrid.Columns>
         </DataGrid>
 
