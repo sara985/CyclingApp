@@ -39,6 +39,7 @@ namespace WpfApp1
             //    MemberViewModel vm = new MemberViewModel();
 
             //OutingDao outingDao = new MemberOutingViewModel();
+            this.DataContext = new MemberOutingViewModel();
             MessageBox.Show("TEST!!!!");
             
         }
@@ -47,6 +48,7 @@ namespace WpfApp1
         private void btnMyAccount_Click(object sender, RoutedEventArgs e)
         {
             lblMainMember.Content = "My Account";
+            this.DataContext= new MyAccountViewModel();
 
         }
 
