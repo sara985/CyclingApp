@@ -123,7 +123,7 @@
         </DataGrid>
 
         <Button Grid.Row="5" x:Name="btnUpdateMyAccount" Content="Update" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnUpdateMyAccount_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="44,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txt_id" HorizontalAlignment="Left" Margin="44,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="{Binding Member.Id}" VerticalAlignment="Center" Visibility="Hidden"/>
 
 
 

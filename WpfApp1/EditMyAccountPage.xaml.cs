@@ -20,9 +20,12 @@ namespace WpfApp1
     /// </summary>
     public partial class EditMyAccountPage : Window
     {
-        public EditMyAccountPage()
+        int id;
+
+        public EditMyAccountPage(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void btnSaveClose_Click(object sender, RoutedEventArgs e)
@@ -32,17 +35,21 @@ namespace WpfApp1
 
         private void btnSaveChangesMyAccount_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Updated");
+            MessageBox.Show("Updated "+id);
         }
 
         private void btnMyBikes_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new EditBikeViewModel();
+            MessageBox.Show(DataContext.GetType().Name);
+
         }
 
         private void btnMyCategory_Click(object sender, RoutedEventArgs e)
         {
            DataContext = new UpdateCategoryViewModel();
+            MessageBox.Show(this.DataContext.GetType().Name);
+
         }
     }
 }

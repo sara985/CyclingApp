@@ -21,7 +21,30 @@ namespace WpfApp1.DAO
         }
         public Member GetById(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
+            {
+                Member m = new Member();
+                SqlCommand cmd = new SqlCommand("Select * from dbo.member where id=@id", connection);
+                cmd.Parameters.AddWithValue("id",id);
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        m.Id = reader.GetInt32("id");
+                        m.Firstname = reader.GetString("firstname");
+                        m.Lastname = reader.GetString("lastname");
+                        m.Email = reader.GetString("mail");
+                        m.Phone = reader.GetString("phone");
+                        m.Password = reader.GetString("password");
+                        m.Position = reader.GetInt32("position");
+                        decimal bal = reader.GetDecimal(7);
+                        m.Balance = bal;
+                    }
+                }
+                return m;
+            }
+            
         }
         public List<Category> GetCategoriesByMemberId(int id)
         {

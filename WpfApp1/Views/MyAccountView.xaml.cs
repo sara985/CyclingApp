@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1.Views
 {
@@ -27,7 +28,8 @@ namespace WpfApp1.Views
 
         private void btnUpdateMyAccount_Click(object sender, RoutedEventArgs e)
         {
-            EditMyAccountPage page = new EditMyAccountPage();
+            int id = Int32.Parse(txt_id.Text);
+            EditMyAccountPage page = new EditMyAccountPage(id);
             page.ShowDialog();
         }
     }

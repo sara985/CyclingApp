@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp1.DAO;
 using WpfApp1.POCO;
 
 namespace WpfApp1.ViewModels
@@ -15,10 +16,19 @@ namespace WpfApp1.ViewModels
         private IList<Bike> _bikes;
         private IList<Outing> _outing;
 
+        private MemberDAO memberDao = new MemberDAO();
+        private OutingDao outingDao = new OutingDao();
+
         public MemberViewModel()
         {
-            _member = new Member();
-            _member.Email = "car";
+        }
+
+        public MemberViewModel(int id)
+        {
+            _member = memberDao.GetById(id);
+            _categories = memberDao.GetCategoriesByMemberId(id);
+            _bikes = memberDao.getBikesByMemberId(id);
+            _outing = outingDao.List();
         }
 
 
