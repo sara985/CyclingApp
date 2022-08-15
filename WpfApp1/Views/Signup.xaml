@@ -85,6 +85,8 @@
                 <RadioButton Grid.Row="1" Grid.Column="1">No</RadioButton>
             </StackPanel>
         </Grid>
-        <Button x:Name="btn_next" Content="Next" Grid.Row="5" Click="btn_next_click"/>
+        <Button x:Name="btn_next" Content="Next" Grid.Row="5" Click="Btn_next_click">
+            
+        </Button>
     </Grid>
 </Page>
