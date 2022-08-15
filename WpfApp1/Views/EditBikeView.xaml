@@ -13,11 +13,11 @@
             <RowDefinition Height="8*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-
-        <DataGrid x:Name="gridOuting" AutoGenerateColumns="False" SelectionUnit="FullRow" Margin="5,5,5,5">
+        <TextBlock Text="{Binding Member.Id}"/>
+        <DataGrid x:Name="gridOuting" AutoGenerateColumns="False" SelectionUnit="FullRow" Margin="5,5,5,5" ItemsSource="{Binding Bikes}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Type" Width="*" FontSize="18" FontWeight="Bold"/>
-                <DataGridTextColumn Header="Weight" Width="*" FontSize="18"/>
+                <DataGridTextColumn Header="Type" Width="*" FontSize="18" FontWeight="Bold" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Weight" Width="*" FontSize="18" Binding="{Binding Weight}"/>
                 <DataGridTextColumn Header="Length" Width="*" FontSize="18"/>
             </DataGrid.Columns>
         </DataGrid>
@@ -38,6 +38,5 @@
             <TextBox Grid.Column="3" x:Name="txtLengthBike" Width="80" Height="40" Text="length(cm)?" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFB0ADAD" FontSize="12"/>
             <Button Grid.Column="4" x:Name="btnAddNewBike" Content="Save" HorizontalAlignment="Center" Width="50" Height="30" VerticalAlignment="Center" Background="#FFE7E7AE" FontSize="14" FontWeight="Bold"/>
         </Grid>
-
     </Grid>
 </UserControl>

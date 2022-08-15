@@ -31,13 +31,13 @@
         <Label Content="Update My Account" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3"/>
 
         <Label Grid.Row="1" Content="First Name:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtFirstName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40" Text="{Binding Firstname}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtFirstName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40" Text="{Binding Member.Firstname}"/>
         <Label Grid.Row="2" Content="Last Name:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtLastName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtLastName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40" Text="{Binding Member.Lastname}"/>
         <Label Grid.Row="3" Content="E-mail:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtmail" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtmail" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40" Text="{Binding Member.Email}"/>
         <Label Grid.Row="4" Content="Phone:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-        <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtPhone" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtPhone" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="40" Text="{Binding Member.Phone}"/>
         <Button Grid.Row="5" Grid.Column="1" x:Name="btnMyBikes" Content="My Bycicle(s)" Width="150" Height="40" HorizontalAlignment="Left" Click="btnMyBikes_Click"/>
         <Button Grid.Row="6" Grid.Column="1" x:Name="btnMyCategory" Content="My Category(es)" Width="150" Height="40" HorizontalAlignment="Left" Click="btnMyCategory_Click"/>
 
@@ -49,18 +49,19 @@
             <Button x:Name="btnSaveChangesMyAccount" Content="Save" Width="250" Height="60" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0" Click="btnSaveChangesMyAccount_Click"/>
             <Button Grid.Column="1" x:Name="btnSaveClose" Content="Close" Width="250" Height="60" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,15,0" Click="btnSaveClose_Click"/>
         </Grid>
-        
-        <ContentControl Grid.Column="2" Content="{Binding}" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Grid.RowSpan="5"/>
+
+        <Frame x:Name="editFrame" Grid.Column="2" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Grid.RowSpan="5" LoadCompleted="editFrame_LoadCompleted"/>
+        <ContentControl x:Name="editContentControl" Grid.Column="2" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Grid.RowSpan="5"/>
 
     </Grid>
 
     <Window.Resources>
-        <DataTemplate x:Name="bicicleModifTemplate" DataType="{x:Type viewmodels:EditBikeViewModel}">
+        <!--<DataTemplate x:Name="bicicleModifTemplate" DataType="{x:Type viewmodels:EditBikeViewModel}">
             <views:EditBikeView></views:EditBikeView>
         </DataTemplate>
 
         <DataTemplate x:Name="categoryModifTemplate" DataType="{x:Type viewmodels:UpdateCategoryViewModel}">
             <views:UpdateCategoryView></views:UpdateCategoryView>
-        </DataTemplate>
+        </DataTemplate>-->
     </Window.Resources>
 </Window>

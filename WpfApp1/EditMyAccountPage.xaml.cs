@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfApp1.ViewModels;
+using WpfApp1.Views;
 
 namespace WpfApp1
 {
@@ -25,7 +26,7 @@ namespace WpfApp1
         public EditMyAccountPage(int id)
         {
             InitializeComponent();
-            this.id = id;
+            this.DataContext = new MemberViewModel(id);
         }
 
         private void btnSaveClose_Click(object sender, RoutedEventArgs e)
@@ -40,16 +41,22 @@ namespace WpfApp1
 
         private void btnMyBikes_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new EditBikeViewModel();
-            MessageBox.Show(DataContext.GetType().Name);
-
+            //editFrame.Source = new System.Uri("views/editbikeview.xaml",UriKind.RelativeOrAbsolute);
+            EditBikeView editBikeView = new EditBikeView();
+            editBikeView.DataContext = this.DataContext;
+            editContentControl.Content = editBikeView;
         }
 
         private void btnMyCategory_Click(object sender, RoutedEventArgs e)
         {
-           DataContext = new UpdateCategoryViewModel();
-            MessageBox.Show(this.DataContext.GetType().Name);
+            editFrame.Source = new System.Uri("views/updatecategoryview.xaml", UriKind.RelativeOrAbsolute);
 
+        }
+
+        private void editFrame_LoadCompleted(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+            editFrame.DataContext = this.DataContext;
+            MessageBox.Show(this.DataContext.ToString());
         }
     }
 }
