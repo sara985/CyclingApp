@@ -28,8 +28,8 @@ namespace WpfApp1.Views
 
         private void btnUpdateMyAccount_Click(object sender, RoutedEventArgs e)
         {
-            int id = Int32.Parse(txt_id.Text);
-            EditMyAccountPage page = new EditMyAccountPage(id);
+            var vm = (MemberViewModel)this.DataContext;
+            EditMyAccountPage page = new EditMyAccountPage(vm.Member.Id);
             page.ShowDialog();
         }
     }
