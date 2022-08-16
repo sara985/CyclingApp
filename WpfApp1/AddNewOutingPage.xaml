@@ -37,7 +37,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-        <Button Name="btnSaveNewOuting" Content="Save" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="btnSaveNewOuting" Content="Save" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSaveNewOuting_Click" />
         <Button Grid.Column="1"  Name="btnClose" Content="Close" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnClose_Click"/>
         </Grid>
         
