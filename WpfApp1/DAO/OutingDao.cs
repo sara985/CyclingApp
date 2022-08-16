@@ -117,5 +117,18 @@ namespace WpfApp1.DAO
                 }
             }
         }
+
+        public bool BookOnlyOutingForMember(int memberId,int outingid)
+        {
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
+            {
+                SqlCommand cmd = new SqlCommand("Insert into outingregistration values(@memberid,@outingid,null,0);", connection);
+                cmd.Parameters.AddWithValue("outingid", outingid);
+                cmd.Parameters.AddWithValue("memberid", memberId);
+                connection.Open();
+                int res = cmd.ExecuteNonQuery();
+                return res > 0;
+            }
+        }
     }
 }
