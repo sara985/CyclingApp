@@ -35,17 +35,21 @@ namespace WpfApp1
         {
             OutingDetailViewModel vm = (OutingDetailViewModel)this.DataContext;
             bookingControl.DataContext = vm;
-            bookingControl.Content = new BookNoCarView(1);
+            bookingControl.Content = new BookNoCarView();
         }
 
         private void RdBtnBookCar_Checked(object sender, RoutedEventArgs e)
         {
-            //DataContext = new BookCarViewModel();
+            OutingDetailViewModel vm = (OutingDetailViewModel)this.DataContext;
+            bookingControl.DataContext = vm;
+            bookingControl.Content = new BookCarView();
         }
 
         private void RdBtnOfferCar_Checked(object sender, RoutedEventArgs e)
         {
-            //DataContext = new OfferPickupViewModel();
+            OutingDetailViewModel vm = (OutingDetailViewModel)this.DataContext;
+            bookingControl.DataContext = vm;
+            bookingControl.Content = new OfferPickupView();
         }
     }
 }

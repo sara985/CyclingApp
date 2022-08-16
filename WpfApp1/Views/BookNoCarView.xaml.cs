@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.DAO;
 using WpfApp1.ViewModels;
 
 namespace WpfApp1.Views
@@ -21,31 +22,28 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class BookNoCarView : UserControl
     {
-        public BookNoCarView(int outingid)
-        {
-            //DataContext = new OutingDetailViewModel(outingid);
-            InitializeComponent();
-
-        }
-
         public BookNoCarView()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            
         }
 
         private void BtnConfirmNoCar_Click(object sender, RoutedEventArgs e)
-
         {
+            //add member to outing
+            var vm = (OutingDetailViewModel)this.DataContext;
+            OutingDao outingDAO = new OutingDao();
+            outingDAO.BookOnlyOutingForMember(vm.MemberId, vm.Outing.Id);
             MessageBox.Show("Succesfully booked to this Outing");
             var myWindow = Window.GetWindow(this);
             myWindow.Close();
-
-
         }
 
-        private void comboListBike_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void comboListBike_Loaded(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(DataContext.ToString());
+            var memberDAO = new MemberDAO();
+            var vm = (OutingDetailViewModel)this.DataContext;
+            comboListBike.ItemsSource = memberDAO.getBikesByMemberId(vm.MemberId);
         }
     }
 }
