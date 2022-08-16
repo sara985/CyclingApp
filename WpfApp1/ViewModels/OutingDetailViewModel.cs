@@ -30,6 +30,13 @@ namespace WpfApp1.ViewModels
             _memberId= memberId;
         }
 
+        public OutingDetailViewModel(Outing outing)
+        {
+            _outing = outing;
+            _bikePlacesNeeded = outingDao.getRequestBikesPlacesByOutingId(outing.Id);
+            _passengerPlacesNeeded = outingDao.getRequestPassengerPlacesByOutingId(outing.Id);
+        }
+
         public Outing Outing
         {
             get { return _outing; }
