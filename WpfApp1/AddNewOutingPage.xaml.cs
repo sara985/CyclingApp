@@ -11,6 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.DAO;
+using WpfApp1.POCO;
+using WpfApp1.ViewModels;
+using WpfApp1.Views;
+
 
 namespace WpfApp1
 {
@@ -31,13 +36,16 @@ namespace WpfApp1
 
         private void btnSaveNewOuting_Click(object sender, RoutedEventArgs e)
         {
-            if (txtStartingPoint.Text.Trim() == "" || PickerOutingDate.Text.Trim()=="" || txtCostOuting.Text.Trim()=="")
+            if (txtStartingPoint.Text.Trim() == "" || PickerOutingDate.Text.Trim()=="" || txtCostOuting.Text.Trim()=="" || txtCatOuting.Text.Trim()=="")
             {
                 MessageBox.Show("Please fill in the form correctly before saving");
             }
             else
             {
-                MessageBox.Show("Tobe continued..");
+                //todo
+                OutingDao outingDAO = new OutingDao();
+                outingDAO.Insert(new Outing(txtStartingPoint.Text,Convert.ToDateTime(PickerOutingDate.Text),Convert.ToDecimal(txtCostOuting.Text),Convert.ToInt32(txtCatOuting.Text)));
+                MessageBox.Show("succeed");
             }
         }
     }

@@ -45,13 +45,14 @@ namespace WpfApp1.DAO
            
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["connectionString"]))
             {
-                SqlCommand cmd = new SqlCommand("insert into outing values(@sp,@do,@c,@cat)", connection);
+                SqlCommand cmd = new SqlCommand("insert into outing values(@sp,@do,@c,@cat);", connection);
                 cmd.Parameters.AddWithValue("sp", t.Startingpoint);
                 cmd.Parameters.AddWithValue("do", t.Outingdate);
                 cmd.Parameters.AddWithValue("c", t.Cost);
                 cmd.Parameters.AddWithValue("cat", t.Category);
                 connection.Open();
                 cmd.ExecuteNonQuery();
+                
             }
         }
 
