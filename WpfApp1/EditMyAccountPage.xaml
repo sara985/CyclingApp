@@ -50,7 +50,6 @@
             <Button Grid.Column="1" x:Name="btnSaveClose" Content="Close" Width="250" Height="60" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,15,0" Click="btnSaveClose_Click"/>
         </Grid>
 
-        <Frame x:Name="editFrame" Grid.Column="2" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Grid.RowSpan="5" LoadCompleted="editFrame_LoadCompleted"/>
         <ContentControl x:Name="editContentControl" Grid.Column="2" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Grid.RowSpan="5"/>
 
     </Grid>

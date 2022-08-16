@@ -41,22 +41,16 @@ namespace WpfApp1
 
         private void btnMyBikes_Click(object sender, RoutedEventArgs e)
         {
-            //editFrame.Source = new System.Uri("views/editbikeview.xaml",UriKind.RelativeOrAbsolute);
             EditBikeView editBikeView = new EditBikeView();
-            editBikeView.DataContext = this.DataContext;
             editContentControl.Content = editBikeView;
         }
 
         private void btnMyCategory_Click(object sender, RoutedEventArgs e)
         {
-            editFrame.Source = new System.Uri("views/updatecategoryview.xaml", UriKind.RelativeOrAbsolute);
+            var vm = new MemberViewModel();
+            var catUserControl = new UpdateCategoryView();
+            editContentControl.Content = new UpdateCategoryView();
 
-        }
-
-        private void editFrame_LoadCompleted(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
-            editFrame.DataContext = this.DataContext;
-            MessageBox.Show(this.DataContext.ToString());
         }
     }
 }

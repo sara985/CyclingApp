@@ -12,8 +12,6 @@ namespace WpfApp1.Interfaces
 
         void Update(T t);
 
-        void Delete(T t);
-
         List<T> List();
 
         T GetById(int id);

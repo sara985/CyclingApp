@@ -18,10 +18,10 @@
         </Grid.RowDefinitions>
 
         <Label Content="Curent Category(es)" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <ComboBox Grid.Column="1" Name="comboListCurentCat" Width="200" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListBox Grid.Column="1" Name="comboListCurentCat" Width="200" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding Categories}" MouseDoubleClick="comboListCurentCat_MouseDoubleClick"/>
         <Label Grid.Row="1" Content="List of Other Categories" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <ComboBox Grid.Row="1" Grid.Column="1" Name="comboCatToAdd" Width="200" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Grid.Row="1" Grid.Column="2" Content="Add" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListBox Grid.Row="1" Grid.Column="1" Name="comboCatToAdd" Width="200" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Loaded="comboCatToAdd_Loaded"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="Add" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
 
     </Grid>
 </UserControl>
