@@ -26,6 +26,8 @@ namespace WpfApp1.POCO
             this.startingpoint = startingpoint;
         }
 
+        public Outing(int id) { this.id = id; }
+
         public int Id { get => id; set => id = value; }
         public DateTime Outingdate { get => outingdate; set => outingdate = value; }
         public decimal Cost { get => cost; set => cost = value; }   

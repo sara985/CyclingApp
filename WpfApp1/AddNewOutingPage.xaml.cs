@@ -28,5 +28,17 @@ namespace WpfApp1
         {
             this.Close();
         }
+
+        private void btnSaveNewOuting_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtStartingPoint.Text.Trim() == "" || PickerOutingDate.Text.Trim()=="" || txtCostOuting.Text.Trim()=="")
+            {
+                MessageBox.Show("Please fill in the form correctly before saving");
+            }
+            else
+            {
+                MessageBox.Show("Tobe continued..");
+            }
+        }
     }
 }
