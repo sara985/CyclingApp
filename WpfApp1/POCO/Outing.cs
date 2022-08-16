@@ -17,6 +17,14 @@ namespace WpfApp1.POCO
 
         public Outing() { }
 
+        public Outing( String startingpoint, DateTime outingdate, decimal cost, int category)
+        {
+            this.outingdate = outingdate;
+            this.cost = cost;
+            this.category = category;
+            this.startingpoint = startingpoint;
+        }
+
         public Outing(int id, String startingpoint,DateTime outingdate, decimal cost, int category)
         {
             this.id = id;
