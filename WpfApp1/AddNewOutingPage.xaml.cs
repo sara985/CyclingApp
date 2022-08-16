@@ -46,6 +46,9 @@ namespace WpfApp1
                 OutingDao outingDAO = new OutingDao();
                 outingDAO.Insert(new Outing(txtStartingPoint.Text,Convert.ToDateTime(PickerOutingDate.Text),Convert.ToDecimal(txtCostOuting.Text),Convert.ToInt32(txtCatOuting.Text)));
                 MessageBox.Show("succeed");
+                txtStartingPoint.Clear();
+                txtCostOuting.Clear();
+                txtCatOuting.Clear();
             }
         }
     }
