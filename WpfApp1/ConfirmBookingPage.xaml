@@ -22,7 +22,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ContentControl Grid.Column="1" Content="{Binding}" Grid.Row="1" Grid.RowSpan="5" Height="Auto" Width="Auto"/>
+        <ContentControl x:Name="bookingControl" Grid.Column="1" Grid.Row="1" Grid.RowSpan="5" Height="Auto" Width="Auto"/>
         <Label Name="labelNameBook" Content="Booking and Transport Organization" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="-1.746,0.277"/>
         <RadioButton Content="Book a Pickup" Name="RdBtnBookCar" VerticalContentAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" FontSize="18" Margin="20,0,0,0" Checked="RdBtnBookCar_Checked"/>
         <RadioButton Content="Offer a Pickup" Name="RdBtnOfferCar" VerticalContentAlignment="Center" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" FontSize="18" Margin="20,0,0,0" Checked="RdBtnOfferCar_Checked"/>
@@ -30,7 +30,7 @@
         <Label x:Name="lblBookChoice" Content="Choose One of The Options Below: " HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontWeight="Bold" FontSize="14"/>
     </Grid>
 
-    <Window.Resources>
+    <!--<Window.Resources>
         <DataTemplate x:Name="BookNoneTemp" DataType="{x:Type viewmodels:BookNoCarViewModel}">
             <views:BookNoCarView>
             </views:BookNoCarView>
@@ -41,11 +41,9 @@
             </views:BookCarView>
         </DataTemplate>
 
-        <DataTemplate x:Name="OfferPicupTemp" DataType="{x:Type viewmodels:OfferPickupViewModel}">
+        <DataTemplate x:Name="OfferPicupTemp" DataType="{x:Type viewmodels:OutingDetailViewModel}">
             <views:OfferPickupView></views:OfferPickupView>
         </DataTemplate>
-
-
-    </Window.Resources>
+    </Window.Resources>-->
 
 </Window>

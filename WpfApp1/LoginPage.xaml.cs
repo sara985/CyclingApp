@@ -40,6 +40,8 @@ namespace WpfApp1
                 MemberDAO mem = new MemberDAO();
                 Member m = mem.GetByLogin(txtEmail.Text, txtPassword.Text);
                 MemberViewModel vm = new MemberViewModel(m.Id);
+                //Outing o = outDAO.GetById(1);
+                //MessageBox.Show(o.Startingpoint);
                 //int i = outDAO.getRequestBikesPlacesByOutingId(1);
                 //MessageBox.Show(i+" ");
 
@@ -58,7 +60,7 @@ namespace WpfApp1
                         managermain.ShowDialog();
                     }
                     else {
-                        NonAdminPage membermain = new NonAdminPage();
+                        NonAdminPage membermain = new NonAdminPage(vm.Member.Id);
                         membermain.DataContext = vm;
                         //MessageBox.Show(vm.Outing.First().Startingpoint);
                         membermain.ShowDialog();

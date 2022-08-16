@@ -22,15 +22,25 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class OutingList : UserControl
     {
+        private int _memberId;
+
         public OutingList()
         {
             InitializeComponent();
         }
 
+        public OutingList(int memberid)
+        {
+            InitializeComponent();
+            MemberId = memberid;
+        }
+
+        public int MemberId { get => _memberId; set => _memberId = value; }
+
         private void btnSeeOuting_Click(object sender, RoutedEventArgs e)
         {
             OutingDetailMemberPage page = new OutingDetailMemberPage();
-            page.DataContext = new OutingDetailViewModel((Outing)gridOuting.SelectedItem);
+            page.DataContext = new OutingDetailViewModel((Outing)gridOuting.SelectedItem, Int32.Parse(txt_id.Text));
             page.ShowDialog();
         }
     }

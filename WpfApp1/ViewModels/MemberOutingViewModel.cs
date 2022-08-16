@@ -12,11 +12,13 @@ namespace WpfApp1.ViewModels
     class MemberOutingViewModel
     {
         private IList<Outing> _outingList;
+        private int _memberId;
         
-        public MemberOutingViewModel()
+        public MemberOutingViewModel(int memberid)
         {
             OutingDao outingDao = new OutingDao();
             _outingList = outingDao.List();
+            _memberId = memberid;
         }
 
         public IList<Outing> Outings
@@ -39,6 +41,8 @@ namespace WpfApp1.ViewModels
                 oUpdater = value;
             }
         }
+
+        public int MemberId { get => _memberId; set => _memberId = value; }
 
         private class Updater : ICommand
         {

@@ -23,12 +23,13 @@ namespace WpfApp1
     /// </summary>
     public partial class NonAdminPage : Window
     {
+        private int _memberId;
 
-        public NonAdminPage()
+        public NonAdminPage(int memberid)
         {
 
             InitializeComponent();
-            //this.memberVM = (MemberViewModel)this.DataContext;
+            _memberId = memberid;
         }
 
 
@@ -36,7 +37,7 @@ namespace WpfApp1
         {
             
             lblMainMember.Content = "list of incoming outings";
-            DataContext = new MemberOutingViewModel();
+            DataContext = new MemberOutingViewModel(_memberId);
             
         }
 
@@ -44,7 +45,7 @@ namespace WpfApp1
         private void btnMyAccount_Click(object sender, RoutedEventArgs e)
         {
             lblMainMember.Content = "My Account";
-            this.DataContext = new MemberViewModel();
+            this.DataContext = new MemberViewModel(_memberId);
 
         }
 

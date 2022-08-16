@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.POCO;
 using WpfApp1.ViewModels;
+using WpfApp1.Views;
 
 namespace WpfApp1
 {
@@ -20,25 +22,30 @@ namespace WpfApp1
     /// </summary>
     public partial class ConfirmBookingPage : Window
     {
-        public ConfirmBookingPage()
+        public ConfirmBookingPage(int outingid, int memberid)
         {
             InitializeComponent();
+            DataContext = new OutingDetailViewModel(outingid,memberid);
+            OutingDetailViewModel vm = (OutingDetailViewModel)this.DataContext;
         }
+
 
 
         private void RdBtnNoCar_Checked_1(object sender, RoutedEventArgs e)
         {
-            DataContext = new BookNoCarViewModel();
+            OutingDetailViewModel vm = (OutingDetailViewModel)this.DataContext;
+            bookingControl.DataContext = vm;
+            bookingControl.Content = new BookNoCarView(1);
         }
 
         private void RdBtnBookCar_Checked(object sender, RoutedEventArgs e)
         {
-            DataContext = new BookCarViewModel();
+            //DataContext = new BookCarViewModel();
         }
 
         private void RdBtnOfferCar_Checked(object sender, RoutedEventArgs e)
         {
-            DataContext = new OfferPickupViewModel();
+            //DataContext = new OfferPickupViewModel();
         }
     }
 }

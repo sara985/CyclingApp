@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1.Views
 {
@@ -20,6 +21,13 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class BookNoCarView : UserControl
     {
+        public BookNoCarView(int outingid)
+        {
+            //DataContext = new OutingDetailViewModel(outingid);
+            InitializeComponent();
+
+        }
+
         public BookNoCarView()
         {
             InitializeComponent();
@@ -33,6 +41,11 @@ namespace WpfApp1.Views
             myWindow.Close();
 
 
+        }
+
+        private void comboListBike_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show(DataContext.ToString());
         }
     }
 }

@@ -19,7 +19,9 @@
                 <ColumnDefinition Width="250*"/>
             </Grid.ColumnDefinitions>
             <Label Name="lblChsBike" Content="Choose your bycicle: " VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14"/>
-            <ComboBox x:Name="comboListBike" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="350" Height="40"/>
+            <ComboBox x:Name="comboListBike" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="350" Height="40" MouseDoubleClick="comboListBike_MouseDoubleClick"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="107,49,0,0" TextWrapping="Wrap" Text="{Binding MemberId}" VerticalAlignment="Top"/>
+            <TextBlock Margin="114,31,29,0" TextWrapping="Wrap" Text="{Binding MemberId}" VerticalAlignment="Top"/>
         </Grid>
         <Button x:Name="BtnConfirmNoCar" Content="CONFIRM" Width="150" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" FontSize="18" FontWeight="Bold" Click="BtnConfirmNoCar_Click"/>
 

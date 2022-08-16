@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1
 {
@@ -38,7 +39,8 @@ namespace WpfApp1
         private void btnBookOuting_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            ConfirmBookingPage page = new ConfirmBookingPage();
+            OutingDetailViewModel viewModel = (OutingDetailViewModel)this.DataContext;
+            ConfirmBookingPage page = new ConfirmBookingPage(viewModel.Outing.Id,viewModel.MemberId);
             page.ShowDialog();  
         }
     }

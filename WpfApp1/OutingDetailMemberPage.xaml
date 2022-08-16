@@ -73,7 +73,7 @@
                 <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
             <Label Name="lblAvailSeat" Content="Passanger seat offer:" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" />
-            <TextBox x:Name="txtAvailSeat" Grid.Column="1" Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <TextBox x:Name="txtAvailSeat" Grid.Column="1" Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding MemberId}"/>
             <Label Name="lblAvailBike" Grid.Column="2" Content="Place for bike offer:" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" />
             <TextBox x:Name="txtAvailBike" Grid.Column="3" Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
         </Grid>
