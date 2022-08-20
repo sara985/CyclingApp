@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.ViewModels;
+using WpfApp1.DAO;
+using WpfApp1.POCO;
+using WpfApp1.ViewModels;
+using WpfApp1.Views;
 
 namespace WpfApp1
 {
@@ -36,6 +40,7 @@ namespace WpfApp1
         {
             lblMainMember.Content = "My Account";
             DataContext = new MyAccountViewModel();
+
         }
 
         private void btnMemberOuting_Click(object sender, RoutedEventArgs e)
